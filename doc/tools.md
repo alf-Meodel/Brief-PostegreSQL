@@ -13,3 +13,17 @@ back ↩️
  <a href="./doc/read-more/objectifs-consignes.md">
   <img src="../assets/design/button/back_to_top.png" alt="Read more" style="width: 150px; height: auto;">
   </a>
+
+---
+
+## ↔
+
+## ↕
+
+## ↓
+
+## →
+
+## ↑
+
+## ←

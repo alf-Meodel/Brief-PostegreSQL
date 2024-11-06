@@ -13,20 +13,28 @@
 
 # Navigation
 
-- [Diagrammes](./doc/diagrammes.md)
+- [Diagrammes MCD MLD](./doc/diagrammes.md)
 - [Règles de gestion](doc/regles-gestion.md)
 
 ![border](assets/line/pink_point_line_r.png)
 
-<!-- <details> -->
+# Merise Définition
 
-<!-- <summary><strong style="font-size: 1.5em; font-weight: bold">Consignes  :</strong></summary> -->
+Merise est une méthode française d'analyse et de conception des systèmes d'information, développée à la fin des années 1970. Le nom "Merise" n'est pas un acronyme, mais certains ont proposé des interprétations telles que
+
+- "Méthode d'Étude et de Réalisation Informatique pour les Systèmes d'Entreprise"
+
+- Cependant, ces interprétations ne sont pas officielles. Le nom "Merise" a été choisi en référence au merisier,
+
+- « qui ne peut porter de beaux fruits que si on lui greffe une branche de cerisier : ainsi en va-t-il des méthodes informatiques bien conçues, qui ne produisent de bons résultats que si la greffe sur l'organisation réussit »
+
+![border](assets/line/pink_point_line_r.png)
 
 # Cardinalités
 
-![border](assets/line/green_point_line_r.png)
+![border](assets/line/green_point_line_l.png)
 
-### Relation Utilisateur / Commande : is ordered by
+### Relation Utilisateur / Commande ↔ is ordered by
 
 - #### Cardinalité Users (0,n) → is ordered by :
 
@@ -36,7 +44,7 @@
 
   Une commande doit être passée par un seul utilisateur. Cela signifie que chaque commande a un utilisateur unique associé, tout comme un ticket de caisse appartient à un seul client et ne peut pas être partagé entre plusieurs clients.
 
-### Relation Commande / Produit : belong
+### Relation Commande / Produit ↔ belong
 
 - #### Cardinalité Orders (1,n) → belong :
 
@@ -94,7 +102,17 @@ Revue de code sur GitHub : Les contributions seront analysées directement dans 
 
 Vous allez contribuer à la création de "AuBonDeal", une plateforme de commerce en ligne 🚀. Cette initiative vise à proposer une solution performante pour la gestion des transactions commerciales, la mise en relation des vendeurs et acheteurs, et la gestion des produits.
 
+---
+
+<a href="#sommaire">
+  <img src="assets/button/back_to_top.png" alt="Home page" style="width: 150px; height: auto;">
+</a>
+
+![border](assets/line/green_point_line_l.png)
+
 ## Votre Mission Consiste à :
+
+![border](assets/line/green_point_line_l.png)
 
 ### Analyse des Modèles de Données :
 
