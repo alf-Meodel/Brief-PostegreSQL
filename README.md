@@ -4,6 +4,8 @@
 
 ![border](assets/design/border/cadre_white_b.png)
 
+![border](assets/design/line/pink_point_line_r.png)
+
 # Sommaire
 
 - [Diagrammes](#diagrammes)
@@ -16,7 +18,7 @@
 
 - [Règles de gestion](doc/regles-gestion.md)
 
-![border](assets/design/line/pink_point_line_r.png)
+![border](assets/design/line/pink_point_line_l.png)
 
 <!-- <details> -->
 
@@ -57,6 +59,10 @@
 
   Un produit peut ne faire partie d'aucune commande, ou être présent dans plusieurs commandes. Par exemple, un produit en stock peut ne pas avoir encore été commandé, mais il peut aussi être inclus dans plusieurs commandes si plusieurs clients l'achètent.
 
+<a href="#sommaire">
+  <img src="assets/design/button/back_to_top.png" alt="Home page" style="width: 150px; height: auto;">
+</a>
+
 ![border](assets/design/line/green_point_line_r.png)
 
 ### Modèle Logique de Données
@@ -64,12 +70,12 @@
 - Le MLD est une représentation du MCD adaptée aux contraintes des bases de données relationnelles. Ce modèle prend en compte la structure des tables, les clés primaires, les clés étrangères et les relations entre les tables.
 
 ![Brief_main_title](assets/img/first_mld.png)
-![border](assets/design/line/green_point_line_r.png)
-![border](assets/design/line/pink_point_line_l.png)
 
 <a href="#sommaire">
   <img src="assets/design/button/back_to_top.png" alt="Home page" style="width: 150px; height: auto;">
 </a>
+
+![border](assets/design/line/green_point_line_l.png)
 
 # Objectif et Consignes
 
