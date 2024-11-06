@@ -11,7 +11,7 @@
 
 # Navigation
 
-- [Règles de gestion](/Brief-PostegreSQL/doc/regles-gestion.md)
+- [Règles de gestion](doc/regles-gestion.md)
 
 ![border](assets/design/line/pink_point_line_r.png)
 
