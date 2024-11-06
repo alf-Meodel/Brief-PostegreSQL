@@ -7,6 +7,9 @@
 # Sommaire
 
 - [Diagrammes](#diagrammes)
+  - [Modèle Conceptuel de Données](#modèle-conceptuel-de-données)
+  - [Cardinalités](#cardinalités)
+  - [Modèle logique de Données](#modèle-logique-de-données)
 - [Objectif et Consignes](#objectif-et-consignes)
 
 # Navigation
@@ -23,55 +26,45 @@
 
 ![border](assets/design/line/green_point_line_l.png)
 
-### MCD - Modèle Conceptuel de Données
+### Modèle Conceptuel de Données
 
 - Le MCD est le premier niveau de conception d'une base de données. Il vise à représenter les données de manière conceptuelle, sans se préoccuper de la structure informatique finale. Ce modèle permet de visualiser les entités principales et les relations entre elles.
 
----
-
----
-
+![border](assets/design/line/green_point_line_r.png)
 ![Brief_main_title](assets/img/first_mcd.png)
 
----
+![border](assets/design/line/green_point_line_l.png)
 
 ## Cardinalités
 
-## Relation utilisateur/commande
+### Relation Utilisateur / Commande : is ordered by
 
-- **Users 0,n > is ordered by :**
+- #### Cardinalité Users (0,n) → is ordered by :
 
-  Cette cardinalité signifie qu'un utilisateur peut passer zéro ou plusieurs commandes
-  En d'autres termes, un utilisateur peut rentrer dans un magasin et ne passer aucune commande, mais il peut aussi en passer plusieurs commandes.
+  Un utilisateur peut passer zéro ou plusieurs commandes. Autrement dit, un utilisateur a la possibilité d’entrer dans un magasin et de ne rien acheter, mais il peut aussi passer plusieurs commandes s'il le souhaite.
 
-- **Orders 1,1 > is ordered by :**
+- #### Cardinalité Orders (1,1) → is ordered by :
 
-  - premier 1 : Qu'une commande doit avoir un utilisateur (obligation).
-  - deuxieme 1 : Qu'une commande ne peut être liée qu'à un seul utilisateur (unicité) le ticket de caisse ne peut pas être départagé entre 10 personnes.
+  Une commande doit être passée par un seul utilisateur. Cela signifie que chaque commande a un utilisateur unique associé, tout comme un ticket de caisse appartient à un seul client et ne peut pas être partagé entre plusieurs clients.
 
-Cette cardinalité signifie qu'une commande doit être passée par exactement un utilisateur.
-Chaque commande est associée à un seul utilisateur, et il est obligatoire pour une commande d'avoir un utilisateur.
+### Relation Commande / Produit : belong
 
-## Relation commande/produit
+- #### Cardinalité Orders (1,n) → belong :
 
-- **1,n Orders > belong(appartenir) :**
+  Une commande doit contenir au moins un produit et peut en contenir plusieurs. En d’autres termes, une commande ne peut pas être vide ; elle doit comporter au moins un produit, mais peut également en inclure plusieurs.
 
-  Cette cardinalité signifie qu'une commande (Orders) doit contenir au moins un produit et peut en contenir plusieurs.
-  Cela reflète le fait qu'une commande ne peut pas exister sans produits (au moins un produit est requis), et elle peut contenir de nombreux produits.
+- #### Cardinalité Products (0,n) → belong :
 
-- **Cardinalité 0,n partant de Products vers belong :**
+  Un produit peut ne faire partie d'aucune commande, ou être présent dans plusieurs commandes. Par exemple, un produit en stock peut ne pas avoir encore été commandé, mais il peut aussi être inclus dans plusieurs commandes si plusieurs clients l'achètent.
 
-  Cette cardinalité signifie qu'un produit (Products) peut être inclus dans aucune, une, ou plusieurs commandes (Orders).
-  Un produit peut ne pas encore être commandé (d'où le 0), mais il peut aussi faire partie de plusieurs commandes.
+![border](assets/design/line/green_point_line_r.png)
 
-![border](assets/design/line/pink_point_line_l.png)
-
-### MLD - Modèle Logique de Données
+### Modèle Logique de Données
 
 - Le MLD est une représentation du MCD adaptée aux contraintes des bases de données relationnelles. Ce modèle prend en compte la structure des tables, les clés primaires, les clés étrangères et les relations entre les tables.
 
 ![Brief_main_title](assets/img/first_mld.png)
-
+![border](assets/design/line/green_point_line_r.png)
 ![border](assets/design/line/pink_point_line_l.png)
 
 <a href="#sommaire">
@@ -79,8 +72,6 @@ Chaque commande est associée à un seul utilisateur, et il est obligatoire pour
 </a>
 
 # Objectif et Consignes
-
-![border](assets/design/line/pink_point_line_l.png)
 
 ## Date de Livraison
 
@@ -149,6 +140,6 @@ Documenter la politique de rétention des sauvegardes en expliquant la fréquenc
   <img src="assets/design/button/back_to_top.png" alt="Home page" style="width: 150px; height: auto;">
 </a>
 
-![border](assets/design/line/pink_point_line_r.png)
+![border](assets/design/line/pink_point_line_l.png)
 
 ![border](assets/design/border/cadre_white_b.png)
