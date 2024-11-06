@@ -1,6 +1,6 @@
 # Brief-PostegreSQL
 
-![Brief_main_title](assets/img/Brief_title.png)
+![Brief_main_title](assets/img/Brief_title3.png)
 
 ![border](assets/design/border/cadre_white_b.png)
 
@@ -8,6 +8,10 @@
 
 - [Objectif et Consignes](#objectif-et-consignes)
 - [Diagrammes](#diagrammes)
+
+# Navigation
+
+- [Règles de gestion](/Brief-PostegreSQL/doc/regles-gestion.md)
 
 ![border](assets/design/line/pink_point_line_l.png)
 
