@@ -7,6 +7,9 @@
 # Sommaire
 
 - [Objectif et Consignes](#objectif-et-consignes)
+- [Diagrammes](#diagrammes)
+
+![border](assets/design/line/pink_point_line_l.png)
 
 <!-- <details> -->
 
@@ -77,7 +80,7 @@ Documenter la politique de rétention des sauvegardes en expliquant la fréquenc
 
 <!-- </details> -->
 
-![border](assets/design/border/cadre_multi_t.png)
+![border](assets/design/line/pink_point_line_l.png)
 
 <a href="#sommaire">
   <img src="assets/design/button/back_to_top.png" alt="Home page" style="width: 150px; height: auto;">
@@ -86,3 +89,19 @@ Documenter la politique de rétention des sauvegardes en expliquant la fréquenc
 ![border](assets/design/border/cadre_white_b.png)
 
 # Diagrammes
+
+### MCD - Modèle Conceptuel de Données
+
+![Brief_main_title](assets/img/first_mcd.png)
+
+### MLD - Modèle Logique de Données
+
+![Brief_main_title](assets/img/first_mld.png)
+
+![border](assets/design/line/pink_point_line_l.png)
+
+<a href="#sommaire">
+  <img src="assets/design/button/back_to_top.png" alt="Home page" style="width: 150px; height: auto;">
+</a>
+
+![border](assets/design/border/cadre_white_b.png)
