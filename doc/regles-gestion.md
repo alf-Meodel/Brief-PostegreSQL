@@ -1,8 +1,8 @@
+![border](../assets/line/pink_point_line_l.png)
+
 # Règles de Gestion
 
-![border](/Brief-PostegreSQL/assets/design/border/cadre_white_b.png)
-
-## Règles de gestion
+![border](../assets/line/green_point_line_l.png)
 
 #### Gestion des utilisateurs :
 
@@ -37,3 +37,14 @@
 - Gestion des visiteurs :
 - Un visiteur peut créer un compte user
 - Un visiteur peut se connecter
+
+![border](../assets/line/pink_point_line_l.png)
+
+<a href="../README.md">
+  <img src="../assets/button/home_page.png" alt="Home page" style="width: 150px; height: auto;">
+</a>
+<a href="#règles-de-gestion">
+  <img src="../assets/button/back_to_top.png" alt="Back to top" style="width: 150px; height: auto;">
+</a>
+
+![border](../assets/line/pink_point_line_l.png)

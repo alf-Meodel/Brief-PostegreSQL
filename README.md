@@ -2,42 +2,29 @@
 
 ![Brief_main_title](assets/img/Brief_title_last.png)
 
-![border](assets/design/border/cadre_white_b.png)
+![border](assets/border/cadre_white_b.png)
 
-![border](assets/design/line/pink_point_line_r.png)
+![border](assets/line/pink_point_line_r.png)
 
 # Sommaire
 
-- [Diagrammes](#diagrammes)
-  - [Modèle Conceptuel de Données](#modèle-conceptuel-de-données)
-  - [Cardinalités](#cardinalités)
-  - [Modèle logique de Données](#modèle-logique-de-données)
+- [Cardinalités](#cardinalités)
 - [Objectif et Consignes](#objectif-et-consignes)
 
 # Navigation
 
+- [Diagrammes](./doc/diagrammes.md)
 - [Règles de gestion](doc/regles-gestion.md)
 
-![border](assets/design/line/pink_point_line_l.png)
+![border](assets/line/pink_point_line_r.png)
 
 <!-- <details> -->
 
 <!-- <summary><strong style="font-size: 1.5em; font-weight: bold">Consignes  :</strong></summary> -->
 
-# Diagrammes
+# Cardinalités
 
-![border](assets/design/line/green_point_line_l.png)
-
-### Modèle Conceptuel de Données
-
-- Le MCD est le premier niveau de conception d'une base de données. Il vise à représenter les données de manière conceptuelle, sans se préoccuper de la structure informatique finale. Ce modèle permet de visualiser les entités principales et les relations entre elles.
-
-![border](assets/design/line/green_point_line_r.png)
-![Brief_main_title](assets/img/first_mcd.png)
-
-![border](assets/design/line/green_point_line_l.png)
-
-## Cardinalités
+![border](assets/line/green_point_line_r.png)
 
 ### Relation Utilisateur / Commande : is ordered by
 
@@ -59,25 +46,17 @@
 
   Un produit peut ne faire partie d'aucune commande, ou être présent dans plusieurs commandes. Par exemple, un produit en stock peut ne pas avoir encore été commandé, mais il peut aussi être inclus dans plusieurs commandes si plusieurs clients l'achètent.
 
-<a href="#sommaire">
-  <img src="assets/design/button/back_to_top.png" alt="Home page" style="width: 150px; height: auto;">
-</a>
+![border](assets/line/green_point_line_l.png)
 
-![border](assets/design/line/green_point_line_r.png)
+   <a href="#sommaire">
+  <img src="assets/button/back_to_top.png" alt="Home page" style="width: 150px; height: auto;">
+  </a>
 
-### Modèle Logique de Données
-
-- Le MLD est une représentation du MCD adaptée aux contraintes des bases de données relationnelles. Ce modèle prend en compte la structure des tables, les clés primaires, les clés étrangères et les relations entre les tables.
-
-![Brief_main_title](assets/img/first_mld.png)
-
-<a href="#sommaire">
-  <img src="assets/design/button/back_to_top.png" alt="Home page" style="width: 150px; height: auto;">
-</a>
-
-![border](assets/design/line/green_point_line_l.png)
+![border](assets/line/pink_point_line_r.png)
 
 # Objectif et Consignes
+
+![border](assets/line/green_point_line_l.png)
 
 ## Date de Livraison
 
@@ -142,10 +121,10 @@ Documenter la politique de rétention des sauvegardes en expliquant la fréquenc
 
 <!-- </details> -->
 
+![border](assets/line/green_point_line_l.png)
+
 <a href="#sommaire">
-  <img src="assets/design/button/back_to_top.png" alt="Home page" style="width: 150px; height: auto;">
+  <img src="assets/button/back_to_top.png" alt="Home page" style="width: 150px; height: auto;">
 </a>
 
-![border](assets/design/line/pink_point_line_l.png)
-
-![border](assets/design/border/cadre_white_b.png)
+![border](assets/line/pink_point_line_l.png)
