@@ -21,7 +21,7 @@
 
 # Diagrammes
 
-![border](assets/design/line/pink_point_line_l.png)
+![border](assets/design/line/green_point_line_l.png)
 
 ### MCD - Modèle Conceptuel de Données
 
@@ -29,35 +29,40 @@
 
 ---
 
-### Cardinalités Explication
+---
 
-![border](assets/design/line/pink_point_line_l.png)
+![Brief_main_title](assets/img/first_mcd.png)
+
+---
+
+## Cardinalités
 
 ## Relation utilisateur/commande
 
 - **Users 0,n > is ordered by :**
 
   Cette cardinalité signifie qu'un utilisateur peut passer zéro ou plusieurs commandes
+  En d'autres termes, un utilisateur peut rentrer dans un magasin et ne passer aucune commande, mais il peut aussi en passer plusieurs commandes.
 
 - **Orders 1,1 > is ordered by :**
 
-  Chaque commande est associée à un seul utilisateur, et il est obligatoire pour une commande d'avoir un utilisateur.
+  - premier 1 : Qu'une commande doit avoir un utilisateur (obligation).
+  - deuxieme 1 : Qu'une commande ne peut être liée qu'à un seul utilisateur (unicité) le ticket de caisse ne peut pas être départagé entre 10 personnes.
+
+Cette cardinalité signifie qu'une commande doit être passée par exactement un utilisateur.
+Chaque commande est associée à un seul utilisateur, et il est obligatoire pour une commande d'avoir un utilisateur.
 
 ## Relation commande/produit
 
 - **1,n Orders > belong(appartenir) :**
 
-  Cela signifie qu'une commande (Orders) doit contenir au moins un produit et peut en contenir plusieurs.
-  **Cela reflète le fait qu'une commande ne peut pas exister sans produits** (au moins un produit est requis), et elle peut contenir de nombreux produits.
+  Cette cardinalité signifie qu'une commande (Orders) doit contenir au moins un produit et peut en contenir plusieurs.
+  Cela reflète le fait qu'une commande ne peut pas exister sans produits (au moins un produit est requis), et elle peut contenir de nombreux produits.
 
 - **Cardinalité 0,n partant de Products vers belong :**
 
   Cette cardinalité signifie qu'un produit (Products) peut être inclus dans aucune, une, ou plusieurs commandes (Orders).
-  **Un produit peut ne pas encore être commandé (d'où le 0), mais il peut aussi faire partie de plusieurs commandes.**
-
----
-
-![Brief_main_title](assets/img/first_mcd.png)
+  Un produit peut ne pas encore être commandé (d'où le 0), mais il peut aussi faire partie de plusieurs commandes.
 
 ![border](assets/design/line/pink_point_line_l.png)
 
