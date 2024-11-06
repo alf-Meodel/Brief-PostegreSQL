@@ -1,14 +1,17 @@
-<div style="text-align: right;">
-  <a href="../README.md">
-    <img src="../assets/button/home_page.png" alt="Home page" style="width: 150px; height: auto;">
-  </a>
-</div>
+ <a href="../README.md">
+  <img src="../assets/button/home_page.png" alt="Home page" style="width: 150px; height: auto;">
+</a>
 
 ![border](../assets/line/pink_point_line_l.png)
 
 # Diagrammes
 
 ![border](../assets/line/green_point_line_l.png)
+
+# Sommaire
+
+- [Cardinalités](#cardinalités)
+- [Objectif et Consignes](#objectif-et-consignes)
 
 ## Modèle Conceptuel de Données
 
