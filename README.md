@@ -1,6 +1,6 @@
 # Brief-PostegreSQL
 
-![Brief_main_title](assets/img/Brief_title3.png)
+![Brief_main_title](assets/img/Brief_title_ok.png)
 
 ![border](assets/design/border/cadre_white_b.png)
 
@@ -94,11 +94,31 @@ Documenter la politique de rétention des sauvegardes en expliquant la fréquenc
 
 # Diagrammes
 
+![border](assets/design/line/pink_point_line_l.png)
+
 ### MCD - Modèle Conceptuel de Données
+
+- Le MCD est le premier niveau de conception d'une base de données. Il vise à représenter les données de manière conceptuelle, sans se préoccuper de la structure informatique finale. Ce modèle permet de visualiser les entités principales et les relations entre elles.
+
+---
+
+### is ordered by :
+
+La relation entre Users et Orders est de type 1,n, signifiant qu'un utilisateur peut passer plusieurs commandes, mais une commande est liée à un seul utilisateur.
+
+### belong :
+
+La relation entre Orders et Products est de type n,n, ce qui signifie qu'une commande peut contenir plusieurs produits et qu'un produit peut être présent dans plusieurs commandes.
+
+---
 
 ![Brief_main_title](assets/img/first_mcd.png)
 
+![border](assets/design/line/pink_point_line_l.png)
+
 ### MLD - Modèle Logique de Données
+
+- Le MLD est une représentation du MCD adaptée aux contraintes des bases de données relationnelles. Ce modèle prend en compte la structure des tables, les clés primaires, les clés étrangères et les relations entre les tables.
 
 ![Brief_main_title](assets/img/first_mld.png)
 
