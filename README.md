@@ -4,7 +4,7 @@
 
 ![border](assets/design/border/cadre_white_b.png)
 
-# Summary
+# Sommaire
 
 - [Objectif et Consignes](#objectif-et-consignes)
 
@@ -76,3 +76,13 @@ Mettre en place une politique de rétention des sauvegardes, incluant la mise en
 Documenter la politique de rétention des sauvegardes en expliquant la fréquence des sauvegardes, la durée de conservation, et les procédures de restauration. Cette documentation doit également préciser les menaces que la politique de rétention permet de contrer.
 
 <!-- </details> -->
+
+![border](assets/design/border/cadre_multi_t.png)
+
+<a href="#sommaire">
+  <img src="assets/design/button/back_to_top.png" alt="Home page" style="width: 150px; height: auto;">
+</a>
+
+![border](assets/design/border/cadre_white_b.png)
+
+# Diagrammes
