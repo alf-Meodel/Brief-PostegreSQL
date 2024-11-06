@@ -1,8 +1,8 @@
 # Brief-PostegreSQL
 
-![Brief_main_title](/Brief-PostegreSQL/assets/img/Brief_title.png)
+![Brief_main_title](/brief-postegresql/assets/img/Brief_title.png)
 
-![border](/Brief-PostegreSQL/assets/design/border/cadre_white_b.png)
+![border](/brief-postegresql/assets/design/border/cadre_white_b.png)
 
 ## Mission
 
