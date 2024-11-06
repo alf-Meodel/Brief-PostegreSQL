@@ -8,57 +8,13 @@
 
 # Sommaire
 
-- [Cardinalités](#cardinalités)
+- [Merise Définition](#merise-définition)
 - [Objectif et Consignes](#objectif-et-consignes)
 
 # Navigation
 
-- [Diagrammes MCD MLD](./doc/diagrammes.md)
+- [Diagrammes MCD MLD](./doc/mcd-mld.md)
 - [Règles de gestion](doc/regles-gestion.md)
-
-![border](assets/line/pink_point_line_r.png)
-
-# Merise Définition
-
-Merise est une méthode française d'analyse et de conception des systèmes d'information, développée à la fin des années 1970. Le nom "Merise" n'est pas un acronyme, mais certains ont proposé des interprétations telles que
-
-- "Méthode d'Étude et de Réalisation Informatique pour les Systèmes d'Entreprise"
-
-- Cependant, ces interprétations ne sont pas officielles. Le nom "Merise" a été choisi en référence au merisier,
-
-- « qui ne peut porter de beaux fruits que si on lui greffe une branche de cerisier : ainsi en va-t-il des méthodes informatiques bien conçues, qui ne produisent de bons résultats que si la greffe sur l'organisation réussit »
-
-![border](assets/line/pink_point_line_r.png)
-
-# Cardinalités
-
-![border](assets/line/green_point_line_l.png)
-
-### Relation Utilisateur / Commande ↔ is ordered by
-
-- #### Cardinalité Users (0,n) → is ordered by :
-
-  Un utilisateur peut passer zéro ou plusieurs commandes. Autrement dit, un utilisateur a la possibilité d’entrer dans un magasin et de ne rien acheter, mais il peut aussi passer plusieurs commandes s'il le souhaite.
-
-- #### Cardinalité Orders (1,1) → is ordered by :
-
-  Une commande doit être passée par un seul utilisateur. Cela signifie que chaque commande a un utilisateur unique associé, tout comme un ticket de caisse appartient à un seul client et ne peut pas être partagé entre plusieurs clients.
-
-### Relation Commande / Produit ↔ belong
-
-- #### Cardinalité Orders (1,n) → belong :
-
-  Une commande doit contenir au moins un produit et peut en contenir plusieurs. En d’autres termes, une commande ne peut pas être vide ; elle doit comporter au moins un produit, mais peut également en inclure plusieurs.
-
-- #### Cardinalité Products (0,n) → belong :
-
-  Un produit peut ne faire partie d'aucune commande, ou être présent dans plusieurs commandes. Par exemple, un produit en stock peut ne pas avoir encore été commandé, mais il peut aussi être inclus dans plusieurs commandes si plusieurs clients l'achètent.
-
-![border](assets/line/green_point_line_l.png)
-
-   <a href="#sommaire">
-  <img src="assets/button/back_to_top.png" alt="Home page" style="width: 150px; height: auto;">
-  </a>
 
 ![border](assets/line/pink_point_line_r.png)
 
