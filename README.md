@@ -1,25 +1,81 @@
 # Brief-PostegreSQL
 
-![Brief_main_title](assets/img/Brief_title_ok.png)
+![Brief_main_title](assets/img/Brief_title_last.png)
 
 ![border](assets/design/border/cadre_white_b.png)
 
 # Sommaire
 
-- [Objectif et Consignes](#objectif-et-consignes)
 - [Diagrammes](#diagrammes)
+- [Objectif et Consignes](#objectif-et-consignes)
 
 # Navigation
 
 - [Règles de gestion](/Brief-PostegreSQL/doc/regles-gestion.md)
 
-![border](assets/design/line/pink_point_line_l.png)
+![border](assets/design/line/pink_point_line_r.png)
 
 <!-- <details> -->
 
 <!-- <summary><strong style="font-size: 1.5em; font-weight: bold">Consignes  :</strong></summary> -->
 
+# Diagrammes
+
+![border](assets/design/line/pink_point_line_l.png)
+
+### MCD - Modèle Conceptuel de Données
+
+- Le MCD est le premier niveau de conception d'une base de données. Il vise à représenter les données de manière conceptuelle, sans se préoccuper de la structure informatique finale. Ce modèle permet de visualiser les entités principales et les relations entre elles.
+
+---
+
+### Cardinalités Explication
+
+![border](assets/design/line/pink_point_line_l.png)
+
+## Relation utilisateur/commande
+
+- **Users 0,n > is ordered by :**
+
+  Cette cardinalité signifie qu'un utilisateur peut passer zéro ou plusieurs commandes
+
+- **Orders 1,1 > is ordered by :**
+
+  Chaque commande est associée à un seul utilisateur, et il est obligatoire pour une commande d'avoir un utilisateur.
+
+## Relation commande/produit
+
+- **1,n Orders > belong(appartenir) :**
+
+  Cela signifie qu'une commande (Orders) doit contenir au moins un produit et peut en contenir plusieurs.
+  **Cela reflète le fait qu'une commande ne peut pas exister sans produits** (au moins un produit est requis), et elle peut contenir de nombreux produits.
+
+- **Cardinalité 0,n partant de Products vers belong :**
+
+  Cette cardinalité signifie qu'un produit (Products) peut être inclus dans aucune, une, ou plusieurs commandes (Orders).
+  **Un produit peut ne pas encore être commandé (d'où le 0), mais il peut aussi faire partie de plusieurs commandes.**
+
+---
+
+![Brief_main_title](assets/img/first_mcd.png)
+
+![border](assets/design/line/pink_point_line_l.png)
+
+### MLD - Modèle Logique de Données
+
+- Le MLD est une représentation du MCD adaptée aux contraintes des bases de données relationnelles. Ce modèle prend en compte la structure des tables, les clés primaires, les clés étrangères et les relations entre les tables.
+
+![Brief_main_title](assets/img/first_mld.png)
+
+![border](assets/design/line/pink_point_line_l.png)
+
+<a href="#sommaire">
+  <img src="assets/design/button/back_to_top.png" alt="Home page" style="width: 150px; height: auto;">
+</a>
+
 # Objectif et Consignes
+
+![border](assets/design/line/pink_point_line_l.png)
 
 ## Date de Livraison
 
@@ -84,48 +140,10 @@ Documenter la politique de rétention des sauvegardes en expliquant la fréquenc
 
 <!-- </details> -->
 
-![border](assets/design/line/pink_point_line_l.png)
-
 <a href="#sommaire">
   <img src="assets/design/button/back_to_top.png" alt="Home page" style="width: 150px; height: auto;">
 </a>
 
-![border](assets/design/border/cadre_white_b.png)
-
-# Diagrammes
-
-![border](assets/design/line/pink_point_line_l.png)
-
-### MCD - Modèle Conceptuel de Données
-
-- Le MCD est le premier niveau de conception d'une base de données. Il vise à représenter les données de manière conceptuelle, sans se préoccuper de la structure informatique finale. Ce modèle permet de visualiser les entités principales et les relations entre elles.
-
----
-
-### is ordered by :
-
-La relation entre Users et Orders est de type 1,n, signifiant qu'un utilisateur peut passer plusieurs commandes, mais une commande est liée à un seul utilisateur.
-
-### belong :
-
-La relation entre Orders et Products est de type n,n, ce qui signifie qu'une commande peut contenir plusieurs produits et qu'un produit peut être présent dans plusieurs commandes.
-
----
-
-![Brief_main_title](assets/img/first_mcd.png)
-
-![border](assets/design/line/pink_point_line_l.png)
-
-### MLD - Modèle Logique de Données
-
-- Le MLD est une représentation du MCD adaptée aux contraintes des bases de données relationnelles. Ce modèle prend en compte la structure des tables, les clés primaires, les clés étrangères et les relations entre les tables.
-
-![Brief_main_title](assets/img/first_mld.png)
-
-![border](assets/design/line/pink_point_line_l.png)
-
-<a href="#sommaire">
-  <img src="assets/design/button/back_to_top.png" alt="Home page" style="width: 150px; height: auto;">
-</a>
+![border](assets/design/line/pink_point_line_r.png)
 
 ![border](assets/design/border/cadre_white_b.png)
