@@ -10,8 +10,7 @@
 
 # Sommaire
 
-- [Diagrammes](#diagrammes)
-- [Merise Définition](#merise-definition)
+- [Merise Définition](#merise-définition)
 
 - [Modèle Conceptuel de Données](#modèle-conceptuel-de-données)
 - [MCD Entités & Relations](#entités)
@@ -20,9 +19,7 @@
 
 # Diagrammes
 
-![Brief_main_title](../assets/img/first_mcd.png)
-
-![Brief_main_title](../assets/img/first_mld.png)
+- [Diagrammes](/Brief-PostegreSQL/doc/diagrammes.md)
 
 ![border](../assets/line/pink_point_line_r.png)
 
@@ -46,7 +43,7 @@ Merise est une méthode française d'analyse et de conception des systèmes d'in
 
 ![border](../assets/line/green_point_line_r.png)
 
-## Entités :
+# Entités :
 
 ![border](../assets/line/green_point_line_l.png)
 
@@ -86,7 +83,7 @@ Elle représente les commandes avec les attributs
 
 ![border](../assets/line/green_point_line_l.png)
 
-## Relations :
+# Relations :
 
 ![border](../assets/line/green_point_line_l.png)
 
@@ -112,7 +109,7 @@ La relation entre Orders et Products est de type n,n, ce qui signifie qu'une com
 
 ![border](../assets/line/pink_point_line_r.png)
 
-## Tables :
+# Tables :
 
 ![border](../assets/line/green_point_line_l.png)
 
@@ -153,7 +150,7 @@ La table contient order_number comme clé primaire et les colonnes
 
 ![border](../assets/line/green_point_line_l.png)
 
-## Relations :
+# Relations :
 
 ![border](../assets/line/green_point_line_l.png)
 
@@ -170,7 +167,7 @@ belong : La relation entre Orders et Products est gérée par une table d'associ
 
 ![border](../assets/line/green_point_line_l.png)
 
-### Relation Utilisateur / Commande ↔ is ordered by
+## Relation Utilisateur / Commande ↔ is ordered by
 
 - #### Cardinalité Users (0,n) → is ordered by :
 
@@ -180,7 +177,7 @@ belong : La relation entre Orders et Products est gérée par une table d'associ
 
   Une commande doit être passée par un seul utilisateur. Cela signifie que chaque commande a un utilisateur unique associé, tout comme un ticket de caisse appartient à un seul client et ne peut pas être partagé entre plusieurs clients.
 
-### Relation Commande / Produit ↔ belong
+## Relation Commande / Produit ↔ belong
 
 - #### Cardinalité Orders (1,n) → belong :
 

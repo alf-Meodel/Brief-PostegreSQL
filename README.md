@@ -4,17 +4,18 @@
 
 ![border](assets/border/cadre_white_b.png)
 
-![border](assets/line/pink_point_line_r.png)
+<!-- ![border](assets/line/pink_point_line_r.png) -->
 
 # Sommaire
 
-- [Merise Définition](#merise-définition)
 - [Objectif et Consignes](#objectif-et-consignes)
+- [Détails de la Mission](#détails-de-la-mission)
 
 # Navigation
 
-- [Diagrammes MCD MLD](./doc/mcd-mld.md)
+- [MCD MLD](./doc/mcd-mld.md)
 - [Règles de gestion](doc/regles-gestion.md)
+- [Dictionnaire de données](./doc/BDD/dictionnaire-de-donnees.md)
 
 ![border](assets/line/pink_point_line_r.png)
 
@@ -66,7 +67,7 @@ Vous allez contribuer à la création de "AuBonDeal", une plateforme de commerce
 
 ![border](assets/line/green_point_line_l.png)
 
-## Votre Mission Consiste à :
+## Détails de la Mission :
 
 ![border](assets/line/green_point_line_l.png)
 
