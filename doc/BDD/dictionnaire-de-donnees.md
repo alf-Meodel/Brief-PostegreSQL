@@ -53,6 +53,52 @@ Les équipes de test et d’analyse peuvent s’appuyer sur le dictionnaire de d
 
 ![border](/assets/line/pink_point_line_l.png)
 
+## Quelques Précisions :
+
+- Quand nous allons générer notre table l'**UUID** ne passera pas il faudra obligatoirement rajouter **uuid_generate_v4()** pour **générer des UUID de manière automatique** dans nos tables.
+
+- mais ca ne fonctionne pas directement
+
+```
+aubondeal> CREATE TABLE users (
+     user_UUID UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+     user_pseudo VARCHAR(50),
+     username VARCHAR(50),
+     user_password VARCHAR(255),
+     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+ );
+function uuid_generate_v4() does not exist
+LINE 2:     user_UUID UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+                                   ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+```
+
+- Dans un premier temps nous allons appeler l'extension dans postegresql , cela fonctionne aussi dans **pgcli**
+
+```
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+```
+
+```
+Time: 0.003s
+aubondeal> CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+CREATE EXTENSION
+Time: 0.005s
+```
+
+à partir de la nous
+
+```
+aubondeal> CREATE TABLE users (
+     user_UUID UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+     user_pseudo VARCHAR(50),
+     username VARCHAR(50),
+     user_password VARCHAR(255),
+     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+ );
+CREATE TABLE
+```
+
 ## Table Users
 
 | Nom de la colonne | Type de donnée | Description                                         |
