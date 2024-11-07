@@ -1,12 +1,14 @@
-<a href="./doc/read-more/objectifs-consignes.md">
-  <img src="../assets/design/button/back_to_top.png" alt="Read more" style="width: 150px; height: auto;">
+<a href="/README.md">
+  <img src="/assets/button/home_page.png" alt="Home page" style="width: 150px; height: auto;">
   </a>
 
-![border](/Brief-PostegreSQL/assets/line/pink_point_line_l.png)
+![border](/assets/line/green_point_line_l.png)
+
+<!-- ![border](../assets/line/pink_point_line_l.png) -->
 
 # Dictionnaire de Données
 
-![border](/Brief-PostegreSQL/assets/line/green_point_line_l.png)
+![border](/assets/line/green_point_line_l.png)
 
 # Sommaire
 
@@ -17,7 +19,7 @@
   - [Table Orders](#table-users)
   - [Table belong (Table d’association entre Orders et Products)](#table-users)
 
-![border](/Brief-PostegreSQL/assets/line/pink_point_line_l.png)
+![border](/assets/line/pink_point_line_l.png)
 
 ## Définition
 
@@ -93,10 +95,10 @@ Les équipes de test et d’analyse peuvent s’appuyer sur le dictionnaire de d
 | order_number      | UUID           | Identifiant de la commande (clé étrangère vers `Orders.order_number`) |
 | product_UUID      | UUID           | Identifiant du produit (clé étrangère vers `Products.product_UUID`)   |
 
-![border](/Brief-PostegreSQL/assets/line/pink_point_line_l.png)
+![border](/assets/line/pink_point_line_l.png)
 
 <a href="../README.md">
-  <img src="assets/button/home_page.png" alt="Home page" style="width: 150px; height: auto;">
+  <img src="/assets/button/home_page.png" alt="Home page" style="width: 150px; height: auto;">
 </a>
 
-![border](/Brief-PostegreSQL/assets/line/pink_point_line_l.png)
+![border](/assets/line/pink_point_line_l.png)

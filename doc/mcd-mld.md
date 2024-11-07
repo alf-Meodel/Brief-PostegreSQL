@@ -19,7 +19,7 @@
 
 # Diagrammes
 
-- [Diagrammes](/Brief-PostegreSQL/doc/diagrammes.md)
+- [Diagrammes](../doc/diagrammes.md)
 
 ![border](../assets/line/pink_point_line_r.png)
 

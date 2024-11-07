@@ -9,7 +9,8 @@
 # Sommaire
 
 - [Objectif et Consignes](#objectif-et-consignes)
-- [Détails de la Mission](#détails-de-la-mission)
+- [Détails sur la Mission](#détails-sur-la-mission)
+- [Livrables](#livrables)
 
 # Navigation
 
@@ -39,6 +40,8 @@ Revue de code sur GitHub : Les contributions seront analysées directement dans 
 - Des règles de gestion
 - Un dictionnaire de données
 - Une définition de l'acronyme MERISE dans la documentation
+- Un document présentant les améliorations à apporter pour cette BDD / Diagrammes fournis
+- Un document expliquant le choix du SGBDR
 
 #### Bonus :
 
@@ -50,26 +53,21 @@ Revue de code sur GitHub : Les contributions seront analysées directement dans 
 - Sécurité : Une **gestion efficace des rôles et permissions** dans la base de données.
 - Documentation : **Clarté et complétude de la documentation fournie**, permettant à un tiers de comprendre facilement la structure et les choix effectués.
 
-<!-- </details> -->
-
-<!-- <details> -->
-<!-- <summary><strong style="font-size: 1.5em; font-weight: bold">Mission  :</strong></summary> -->
-
-## Contexte du projet
-
-Vous allez contribuer à la création de "AuBonDeal", une plateforme de commerce en ligne 🚀. Cette initiative vise à proposer une solution performante pour la gestion des transactions commerciales, la mise en relation des vendeurs et acheteurs, et la gestion des produits.
-
----
-
 <a href="#sommaire">
   <img src="assets/button/back_to_top.png" alt="Home page" style="width: 150px; height: auto;">
 </a>
 
 ![border](assets/line/green_point_line_l.png)
 
-## Détails de la Mission :
+## Détails sur la Mission
 
 ![border](assets/line/green_point_line_l.png)
+
+## Contexte du projet
+
+Vous allez contribuer à la création de "AuBonDeal", une plateforme de commerce en ligne 🚀. Cette initiative vise à proposer une solution performante pour la gestion des transactions commerciales, la mise en relation des vendeurs et acheteurs, et la gestion des produits.
+
+---
 
 ### Analyse des Modèles de Données :
 
@@ -93,8 +91,6 @@ Traduire le MCD et le MLD en une base de données relationnelle fonctionnelle, �
 Réaliser l’exportation et la sauvegarde de la base de données en utilisant les commandes SQL appropriées.
 Mettre en place une politique de rétention des sauvegardes, incluant la mise en place d’un script pour la sauvegarde journalière.
 Documenter la politique de rétention des sauvegardes en expliquant la fréquence des sauvegardes, la durée de conservation, et les procédures de restauration. Cette documentation doit également préciser les menaces que la politique de rétention permet de contrer.
-
-<!-- </details> -->
 
 ![border](assets/line/green_point_line_l.png)
 
