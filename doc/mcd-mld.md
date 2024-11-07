@@ -13,9 +13,10 @@
 - [Merise Définition](#merise-définition)
 
 - [Modèle Conceptuel de Données](#modèle-conceptuel-de-données)
-- [MCD Entités & Relations](#entités)
+  - [Entités & Relations](#entités)
 - [Modèle Logique de Données](#modèle-logique-de-données)
-- [MLD Tables & Relations](#tables)
+  - [Tables & Relations](#tables)
+- [Cardinalités](#cardinalités)
 
 # Diagrammes
 
@@ -43,7 +44,7 @@ Merise est une méthode française d'analyse et de conception des systèmes d'in
 
 ![border](../assets/line/green_point_line_r.png)
 
-# Entités :
+# Entités
 
 ![border](../assets/line/green_point_line_l.png)
 
@@ -109,7 +110,7 @@ La relation entre Orders et Products est de type n,n, ce qui signifie qu'une com
 
 ![border](../assets/line/pink_point_line_r.png)
 
-# Tables :
+# Tables
 
 ![border](../assets/line/green_point_line_l.png)
 

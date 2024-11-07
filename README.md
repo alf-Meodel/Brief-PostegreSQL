@@ -35,13 +35,13 @@ Revue de code sur GitHub : Les contributions seront analysées directement dans 
 
 ## Livrables
 
-- Repo Github
-- Un fichier SQL format PostgreSQL
-- Des règles de gestion
-- Un dictionnaire de données
-- Une définition de l'acronyme MERISE dans la documentation
-- Un document présentant les améliorations à apporter pour cette BDD / Diagrammes fournis
-- Un document expliquant le choix du SGBDR
+- [x] Repo Github
+- [ ] Un fichier SQL format PostgreSQL
+- [x] Des règles de gestion
+- [x] Un dictionnaire de données
+- [x] Une définition de l'acronyme MERISE dans la documentation
+- [ ] Un document présentant les améliorations à apporter pour cette BDD / Diagrammes fournis
+- [ ] Un document expliquant le choix du SGBDR
 
 #### Bonus :
 
