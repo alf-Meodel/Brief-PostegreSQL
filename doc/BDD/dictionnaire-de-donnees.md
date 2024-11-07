@@ -4,8 +4,6 @@
 
 ![border](/assets/line/green_point_line_l.png)
 
-<!-- ![border](../assets/line/pink_point_line_l.png) -->
-
 # Dictionnaire de Données
 
 ![border](/assets/line/green_point_line_l.png)
