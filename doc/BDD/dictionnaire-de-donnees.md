@@ -49,11 +49,11 @@ Il spécifie également les contraintes sur les données (ex., pas de valeurs nu
 
 Les équipes de test et d’analyse peuvent s’appuyer sur le dictionnaire de données pour comprendre les structures qu’elles doivent vérifier ou analyser, ce qui aide à établir des plans de test efficaces et à interpréter les résultats.
 
-![border](/Brief-PostegreSQL/assets/line/pink_point_line_l.png)
+![border](/assets/line/pink_point_line_l.png)
 
 # Le Dictionnaire de données
 
-![border](/Brief-PostegreSQL/assets/line/pink_point_line_l.png)
+![border](/assets/line/pink_point_line_l.png)
 
 ## Table Users
 
@@ -99,6 +99,9 @@ Les équipes de test et d’analyse peuvent s’appuyer sur le dictionnaire de d
 
 <a href="../README.md">
   <img src="/assets/button/home_page.png" alt="Home page" style="width: 150px; height: auto;">
+</a>
+<a href="#dictionnaire-de-données">
+  <img src="/assets/button/back_to_top.png" alt="summary" style="width: 150px; height: auto;">
 </a>
 
 ![border](/assets/line/pink_point_line_l.png)
