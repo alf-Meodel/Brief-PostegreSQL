@@ -16,6 +16,8 @@
   - [Table Products](#table-users)
   - [Table Orders](#table-users)
   - [Table belong (Table d’association entre Orders et Products)](#table-users)
+  - [Tips techniques](#tips-techniques)
+    - [uuid_generate_v4](#uuid_generate_v4)
 
 ![border](/assets/line/pink_point_line_l.png)
 
@@ -53,7 +55,54 @@ Les équipes de test et d’analyse peuvent s’appuyer sur le dictionnaire de d
 
 ![border](/assets/line/pink_point_line_l.png)
 
-## Quelques Précisions :
+
+## Table Users
+
+| Nom de la colonne | Type de donnée | Description                                         |
+| ----------------- | -------------- | --------------------------------------------------- |
+| user_UUID         | UUID           | Identifiant unique de l’utilisateur (clé primaire)  |
+| user_pseudo       | VARCHAR(50)    | Pseudonyme de l’utilisateur                         |
+| username          | VARCHAR(50)    | Nom complet de l’utilisateur                        |
+| user_password     | VARCHAR(255)   | Mot de passe de l’utilisateur, sécurisé par hachage |
+| created_at        | TIMESTAMP      | Date et heure de création de l’utilisateur          |
+
+## Table Products
+
+| Nom de la colonne   | Type de donnée | Description                                         |
+| ------------------- | -------------- | --------------------------------------------------- |
+| product_UUID        | UUID           | Identifiant unique du produit (clé primaire)        |
+| product_name        | VARCHAR(100)   | Nom du produit                                      |
+| product_description | TEXT           | Description détaillée du produit                    |
+| product_price       | DECIMAL(10, 2) | Prix unitaire du produit                            |
+| product_quantity    | INTEGER        | Quantité de produit disponible                      |
+| created_at          | TIMESTAMP      | Date et heure de création du produit                |
+| updated_at          | TIMESTAMP      | Date et heure de la dernière mise à jour du produit |
+
+## Table Orders
+
+| Nom de la colonne    | Type de donnée | Description                                                                                 |
+| -------------------- | -------------- | ------------------------------------------------------------------------------------------- |
+| order_number         | UUID           | Identifiant unique de la commande (clé primaire)                                            |
+| order_total_cost_ht  | DECIMAL(10, 2) | Coût total hors taxes de la commande                                                        |
+| order_total_quantity | INTEGER        | Quantité totale de produits dans la commande                                                |
+| created_at           | TIMESTAMP      | Date et heure de création de la commande                                                    |
+| deliver_at           | DATE           | Date de livraison prévue de la commande                                                     |
+| user_UUID            | UUID           | Identifiant de l’utilisateur ayant passé la commande (clé étrangère vers `Users.user_UUID`) |
+
+## Table belong (Table d’association entre Orders et Products)
+
+| Nom de la colonne | Type de donnée | Description                                                           |
+| ----------------- | -------------- | --------------------------------------------------------------------- |
+| order_number      | UUID           | Identifiant de la commande (clé étrangère vers `Orders.order_number`) |
+| product_UUID      | UUID           | Identifiant du produit (clé étrangère vers `Products.product_UUID`)   |
+
+![border](/assets/line/pink_point_line_l.png)
+
+
+
+## Tips Techniques
+
+### uuid_generate_v4
 
 - Quand nous allons générer notre table l'**UUID** ne passera pas il faudra obligatoirement rajouter **uuid_generate_v4()** pour **générer des UUID de manière automatique** dans nos tables.
 
@@ -99,47 +148,6 @@ aubondeal> CREATE TABLE users (
 CREATE TABLE
 ```
 
-## Table Users
-
-| Nom de la colonne | Type de donnée | Description                                         |
-| ----------------- | -------------- | --------------------------------------------------- |
-| user_UUID         | UUID           | Identifiant unique de l’utilisateur (clé primaire)  |
-| user_pseudo       | VARCHAR(50)    | Pseudonyme de l’utilisateur                         |
-| username          | VARCHAR(50)    | Nom complet de l’utilisateur                        |
-| user_password     | VARCHAR(255)   | Mot de passe de l’utilisateur, sécurisé par hachage |
-| created_at        | TIMESTAMP      | Date et heure de création de l’utilisateur          |
-
-## Table Products
-
-| Nom de la colonne   | Type de donnée | Description                                         |
-| ------------------- | -------------- | --------------------------------------------------- |
-| product_UUID        | UUID           | Identifiant unique du produit (clé primaire)        |
-| product_name        | VARCHAR(100)   | Nom du produit                                      |
-| product_description | TEXT           | Description détaillée du produit                    |
-| product_price       | DECIMAL(10, 2) | Prix unitaire du produit                            |
-| product_quantity    | INTEGER        | Quantité de produit disponible                      |
-| created_at          | TIMESTAMP      | Date et heure de création du produit                |
-| updated_at          | TIMESTAMP      | Date et heure de la dernière mise à jour du produit |
-
-## Table Orders
-
-| Nom de la colonne    | Type de donnée | Description                                                                                 |
-| -------------------- | -------------- | ------------------------------------------------------------------------------------------- |
-| order_number         | UUID           | Identifiant unique de la commande (clé primaire)                                            |
-| order_total_cost_ht  | DECIMAL(10, 2) | Coût total hors taxes de la commande                                                        |
-| order_total_quantity | INTEGER        | Quantité totale de produits dans la commande                                                |
-| created_at           | TIMESTAMP      | Date et heure de création de la commande                                                    |
-| deliver_at           | DATE           | Date de livraison prévue de la commande                                                     |
-| user_UUID            | UUID           | Identifiant de l’utilisateur ayant passé la commande (clé étrangère vers `Users.user_UUID`) |
-
-## Table belong (Table d’association entre Orders et Products)
-
-| Nom de la colonne | Type de donnée | Description                                                           |
-| ----------------- | -------------- | --------------------------------------------------------------------- |
-| order_number      | UUID           | Identifiant de la commande (clé étrangère vers `Orders.order_number`) |
-| product_UUID      | UUID           | Identifiant du produit (clé étrangère vers `Products.product_UUID`)   |
-
-![border](/assets/line/pink_point_line_l.png)
 
 <a href="../README.md">
   <img src="/assets/button/home_page.png" alt="Home page" style="width: 150px; height: auto;">
