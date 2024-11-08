@@ -16,8 +16,8 @@
   - [Table Products](#table-users)
   - [Table Orders](#table-users)
   - [Table belong (Table d’association entre Orders et Products)](#table-users)
-  - [Tips techniques](#tips-techniques)
-    - [uuid_generate_v4](#uuid_generate_v4)
+- [Conseils techniques](#tips-techniques)
+  - [uuid_generate_v4](#uuid_generate_v4)
 
 ![border](/assets/line/pink_point_line_l.png)
 
@@ -54,7 +54,6 @@ Les équipes de test et d’analyse peuvent s’appuyer sur le dictionnaire de d
 # Le Dictionnaire de données
 
 ![border](/assets/line/pink_point_line_l.png)
-
 
 ## Table Users
 
@@ -98,9 +97,7 @@ Les équipes de test et d’analyse peuvent s’appuyer sur le dictionnaire de d
 
 ![border](/assets/line/pink_point_line_l.png)
 
-
-
-## Tips Techniques
+## Conseils Techniques
 
 ### uuid_generate_v4
 
@@ -147,7 +144,6 @@ aubondeal> CREATE TABLE users (
  );
 CREATE TABLE
 ```
-
 
 <a href="../README.md">
   <img src="/assets/button/home_page.png" alt="Home page" style="width: 150px; height: auto;">
