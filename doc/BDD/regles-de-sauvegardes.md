@@ -1,4 +1,12 @@
+<a href="/README.md">
+  <img src="/assets/button/home_page.png" alt="Home page" style="width: 150px; height: auto;">
+  </a>
+
+![border](/assets/line/green_point_line_l.png)
+
 # Documentation : Sauvegardes Automatiques de Base de Données avec Cron
+
+![border](/assets/line/green_point_line_l.png)
 
 Cette documentation explique comment configurer une tâche cron pour effectuer des sauvegardes automatiques de votre base de données en utilisant pg_dump. Ce guide est destiné aux utilisateurs de PostgreSQL, mais peut être adapté pour d’autres bases de données.
 
