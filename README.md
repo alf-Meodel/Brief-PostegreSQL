@@ -17,7 +17,8 @@
 - [MCD MLD](./doc/mcd-mld.md)
 - [Règles de gestion](doc/regles-gestion.md)
 - [Dictionnaire de données](./doc/BDD/dictionnaire-de-donnees.md)
-- [Regles de sauvegarde](/doc/securite/politique-de-retention.md)
+- [Regles de sauvegarde](./doc/BDD/regles-de-sauvegardes.md)
+- [Dictionnaire de données](./doc/BDD/dictionnaire-de-donnees.md)
 
 ![border](assets/line/pink_point_line_r.png)
 
