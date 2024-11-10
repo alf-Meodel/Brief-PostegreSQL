@@ -6,7 +6,7 @@
 
 # MCD et MLD
 
-![border](../assets/line/line_pink_point_r.png)
+![border](../assets/line/line_pink_point_l.png)
 
 # Sommaire
 
