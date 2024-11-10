@@ -2,11 +2,11 @@
   <img src="../assets/button/home_page.png" alt="Home page" style="width: 150px; height: auto;">
 </a>
 
-![border](../assets/line/pink_point_line_l.png)
+![border](../assets/line/border_r.png)
 
 # MCD et MLD
 
-![border](../assets/line/green_point_line_l.png)
+![border](../assets/line/line_pink_point_r.png)
 
 # Sommaire
 
@@ -22,7 +22,7 @@
 
 - [Diagrammes](../doc/diagrammes.md)
 
-![border](../assets/line/pink_point_line_r.png)
+![border](../assets/line/line_pink_point_r.png)
 
 # Merise Définition
 
@@ -34,19 +34,27 @@ Merise est une méthode française d'analyse et de conception des systèmes d'in
 
 - « qui ne peut porter de beaux fruits que si on lui greffe une branche de cerisier : ainsi en va-t-il des méthodes informatiques bien conçues, qui ne produisent de bons résultats que si la greffe sur l'organisation réussit »
 
-![border](../assets/line/pink_point_line_r.png)
+<a href="#diagrammes">
+  <img src="../assets/button/back_to_top.png" alt="Back to top" style="width: 150px; height: auto;">
+</a>
+
+![border](../assets/line/line_teal_point_l.png)
 
 ## Modèle Conceptuel de Données
 
+![border](../assets/line/line_teal_point_r.png)
+
 - Le MCD est le premier niveau de conception d'une base de données. Il vise à représenter les données de manière conceptuelle, sans se préoccuper de la structure informatique finale. Ce modèle permet de visualiser les entités principales et les relations entre elles.
 
----
+<a href="#diagrammes">
+  <img src="../assets/button/back_to_top.png" alt="Back to top" style="width: 150px; height: auto;">
+</a>
 
-![border](../assets/line/green_point_line_r.png)
+![border](../assets/line/line_teal_point_l.png)
 
 # Entités
 
-![border](../assets/line/green_point_line_l.png)
+![border](../assets/line/line_teal_point_r.png)
 
 ### Users :
 
@@ -82,11 +90,11 @@ Elle représente les commandes avec les attributs
 - deliver_at,
 - une clé étrangère user_UUID **pour lier une commande à un utilisateur.**
 
-![border](../assets/line/green_point_line_l.png)
+![border](../assets/line/line_teal_point_l.png)
 
 # Relations :
 
-![border](../assets/line/green_point_line_l.png)
+![border](../assets/line/line_teal_point_r.png)
 
 ### is ordered by :
 
@@ -96,23 +104,23 @@ La relation entre Users et Orders est de type 1,n, signifiant qu'un utilisateur 
 
 La relation entre Orders et Products est de type n,n, ce qui signifie qu'une commande peut contenir plusieurs produits et qu'un produit peut être présent dans plusieurs commandes.
 
-![border](../assets/line/pink_point_line_r.png)
-
 <a href="#diagrammes">
   <img src="../assets/button/back_to_top.png" alt="Back to top" style="width: 150px; height: auto;">
 </a>
 
+![border](../assets/line/line_teal_point_l.png)
+
 ## Modèle Logique de Données
 
-![border](../assets/line/green_point_line_l.png)
+![border](../assets/line/line_teal_point_r.png)
 
 - Le MLD est une représentation du MCD adaptée aux contraintes des bases de données relationnelles. Ce modèle prend en compte la structure des tables, les clés primaires, les clés étrangères et les relations entre les tables.
 
-![border](../assets/line/pink_point_line_r.png)
+![border](../assets/line/line_teal_point_l.png)
 
 # Tables
 
-![border](../assets/line/green_point_line_l.png)
+![border](../assets/line/line_teal_point_r.png)
 
 ### Users :
 
@@ -149,11 +157,15 @@ La table contient order_number comme clé primaire et les colonnes
 - deliver_at,
 - une clé étrangère user_UUID **qui fait référence à la table Users.**
 
-![border](../assets/line/green_point_line_l.png)
+<a href="#diagrammes">
+  <img src="../assets/button/back_to_top.png" alt="Back to top" style="width: 150px; height: auto;">
+</a>
+
+![border](../assets/line/line_teal_point_l.png)
 
 # Relations :
 
-![border](../assets/line/green_point_line_l.png)
+![border](../assets/line/line_teal_point_r.png)
 
 is ordered by : La relation est représentée par une clé étrangère user_UUID dans la table Orders, pour indiquer que chaque commande est passée par un utilisateur.
 belong : La relation entre Orders et Products est gérée par une table d'association belong, avec deux clés étrangères product_UUID et order_number, qui relient les produits aux commandes dans une relation de type n,n.
@@ -162,11 +174,11 @@ belong : La relation entre Orders et Products est gérée par une table d'associ
   <img src="../assets/button/back_to_top.png" alt="Back to top" style="width: 150px; height: auto;">
 </a>
 
-![border](../assets/line/pink_point_line_r.png)
+![border](../assets/line/line_teal_point_r.png)
 
 # Cardinalités
 
-![border](../assets/line/green_point_line_l.png)
+![border](../assets/line/line_teal_point_l.png)
 
 ## Relation Utilisateur / Commande ↔ is ordered by
 
@@ -188,7 +200,7 @@ belong : La relation entre Orders et Products est gérée par une table d'associ
 
   Un produit peut ne faire partie d'aucune commande, ou être présent dans plusieurs commandes. Par exemple, un produit en stock peut ne pas avoir encore été commandé, mais il peut aussi être inclus dans plusieurs commandes si plusieurs clients l'achètent.
 
-![border](../assets/line/green_point_line_l.png)
+![border](../assets/line/line_pink_point_l.png)
 
 <a href="../README.md">
   <img src="../assets/button/home_page.png" alt="Home page" style="width: 150px; height: auto;">
@@ -196,4 +208,4 @@ belong : La relation entre Orders et Products est gérée par une table d'associ
   <img src="../assets/button/back_to_top.png" alt="Back to top" style="width: 150px; height: auto;">
 </a>
 
-![border](../assets/line/pink_point_line_l.png)
+![border](../assets/line/border_r.png)

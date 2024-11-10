@@ -2,11 +2,11 @@
   <img src="../assets/button/home_page.png" alt="Home page" style="width: 150px; height: auto;">
 </a>
 
-![border](../assets/line/pink_point_line_l.png)
+![border](../assets/line/border_r.png)
 
 # Règles de Gestion
 
-![border](../assets/line/green_point_line_l.png)
+![border](../assets/line/line_pink_point_r.png)
 
 #### Gestion des utilisateurs :
 
@@ -42,7 +42,7 @@
 - Un visiteur peut créer un compte user
 - Un visiteur peut se connecter
 
-![border](../assets/line/pink_point_line_l.png)
+![border](../assets/line/line_teal_point_l.png)
 
 <a href="../README.md">
   <img src="../assets/button/home_page.png" alt="Home page" style="width: 150px; height: auto;">
@@ -51,4 +51,4 @@
   <img src="../assets/button/back_to_top.png" alt="Back to top" style="width: 150px; height: auto;">
 </a>
 
-![border](../assets/line/pink_point_line_l.png)
+![border](../assets/line/line_pink_point_r.png)

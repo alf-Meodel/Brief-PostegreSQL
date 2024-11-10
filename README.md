@@ -2,9 +2,7 @@
 
 ![Brief_main_title](assets/img/Brief_title_last.png)
 
-![border](assets/border/cadre_white_b.png)
-
-<!-- ![border](assets/line/pink_point_line_r.png) -->
+![border](assets/line/border_l.png)
 
 # Sommaire
 
@@ -20,11 +18,11 @@
 - [Regles de sauvegarde](./doc/BDD/regles-de-sauvegardes.md)
 - [Dictionnaire de données](./doc/BDD/dictionnaire-de-donnees.md)
 
-![border](assets/line/pink_point_line_r.png)
+![border](assets/line/border_b.png)
 
 # Objectif et Consignes
 
-![border](assets/line/green_point_line_l.png)
+![border](assets/line/line_pink_point_l.png)
 
 ## Date de Livraison
 
@@ -59,11 +57,11 @@ Revue de code sur GitHub : Les contributions seront analysées directement dans 
   <img src="assets/button/back_to_top.png" alt="Home page" style="width: 150px; height: auto;">
 </a>
 
-![border](assets/line/green_point_line_l.png)
+![border](assets/line/line_teal_point_l.png)
 
 ## Détails sur la Mission
 
-![border](assets/line/green_point_line_l.png)
+![border](assets/line/line_teal_point_r.png)
 
 ## Contexte du projet
 
@@ -94,10 +92,9 @@ Réaliser l’exportation et la sauvegarde de la base de données en utilisant l
 Mettre en place une politique de rétention des sauvegardes, incluant la mise en place d’un script pour la sauvegarde journalière.
 Documenter la politique de rétention des sauvegardes en expliquant la fréquence des sauvegardes, la durée de conservation, et les procédures de restauration. Cette documentation doit également préciser les menaces que la politique de rétention permet de contrer.
 
-![border](assets/line/green_point_line_l.png)
-
+![border](assets/line/line_pink_point_l.png)
 <a href="#sommaire">
-  <img src="assets/button/back_to_top.png" alt="Home page" style="width: 150px; height: auto;">
+<img src="assets/button/back_to_top.png" alt="Home page" style="width: 150px; height: auto;">
 </a>
 
-![border](assets/line/pink_point_line_l.png)
+![border](assets/line/border_l.png)
