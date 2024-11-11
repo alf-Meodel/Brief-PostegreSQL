@@ -1,13 +1,12 @@
 <a href="/README.md">
-  <img src="/assets/button/home_page.png" alt="Home page" style="width: 150px; height: auto;">
+  <img src="/Brief-PostegreSQL/assets/button/home_page.png" alt="Home page" style="width: 150px; height: auto;">
   </a>
 
-![border](/assets/line/green_point_line_l.png)
+![border](/Brief-PostegreSQL/assets/line/border_b.png)
 
 # Dictionnaire de Données
 
-![border](/assets/line/green_point_line_l.png)
-
+![border](/Brief-PostegreSQL/assets/line/line_pink_point_r.png)
 # Sommaire
 
 - [Définition](#définition)
@@ -19,7 +18,8 @@
 - [Conseils techniques](#tips-techniques)
   - [uuid_generate_v4](#uuid_generate_v4)
 
-![border](/assets/line/pink_point_line_l.png)
+
+![border](/Brief-PostegreSQL/assets/line/line_teal_point_l.png)
 
 ## Définition
 
@@ -49,11 +49,11 @@ Il spécifie également les contraintes sur les données (ex., pas de valeurs nu
 
 Les équipes de test et d’analyse peuvent s’appuyer sur le dictionnaire de données pour comprendre les structures qu’elles doivent vérifier ou analyser, ce qui aide à établir des plans de test efficaces et à interpréter les résultats.
 
-![border](/assets/line/pink_point_line_l.png)
+![border](/Brief-PostegreSQL/assets/line/line_pink_point_l.png)
 
 # Le Dictionnaire de données
 
-![border](/assets/line/pink_point_line_l.png)
+![border](/Brief-PostegreSQL/assets/line/line_teal_point_r.png)
 
 ## Table Users
 
@@ -95,7 +95,7 @@ Les équipes de test et d’analyse peuvent s’appuyer sur le dictionnaire de d
 | order_number      | UUID           | Identifiant de la commande (clé étrangère vers `Orders.order_number`) |
 | product_UUID      | UUID           | Identifiant du produit (clé étrangère vers `Products.product_UUID`)   |
 
-![border](/assets/line/pink_point_line_l.png)
+![border](/Brief-PostegreSQL/assets/line/line_pink_point_l.png)
 
 ## Conseils Techniques
 
@@ -143,13 +143,15 @@ aubondeal> CREATE TABLE users (
      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
  );
 CREATE TABLE
+
 ```
+![border](/Brief-PostegreSQL/assets/line/line_pink_point_l.png)
 
 <a href="../README.md">
-  <img src="/assets/button/home_page.png" alt="Home page" style="width: 150px; height: auto;">
+  <img src="/Brief-PostegreSQL//assets/button/home_page.png" alt="Home page" style="width: 150px; height: auto;">
 </a>
 <a href="#dictionnaire-de-données">
-  <img src="/assets/button/back_to_top.png" alt="summary" style="width: 150px; height: auto;">
+  <img src="/Brief-PostegreSQL//assets/button/back_to_top.png" alt="summary" style="width: 150px; height: auto;">
 </a>
 
-![border](/assets/line/pink_point_line_l.png)
+![border](/Brief-PostegreSQL/assets/line/border_b.png)
