@@ -18,6 +18,8 @@
   - [Tables & Relations](#tables)
 - [Cardinalités](#cardinalités)
 
+![border](../assets/line/border_b.png)
+
 # Diagrammes
 
 - [Diagrammes](../doc/diagrammes.md)

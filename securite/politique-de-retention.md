@@ -17,9 +17,11 @@
 - [Règle de Sauvegarde 3 2 1](#règle-de-sauvegarde-3-2-1)
 - [Automatisation des Sauvegardes](#automatisation-des-sauvegardes)
 
-![border](../assets/line/line_pink_point_l.png)
+![border](../assets/line/border_b.png)
 
-## Objectif
+# Objectif
+
+![border](../assets/line/line_pink_point_l.png)
 
 La politique de rétention des sauvegardes PostgreSQL a pour vocation de garantir la sécurité, l’intégrité, et la disponibilité des données critiques de l’organisation. Elle est conçue pour répondre aux exigences de restauration rapide en cas d’incident, tout en minimisant les risques associés aux pertes de données.
 

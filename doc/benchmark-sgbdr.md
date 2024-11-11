@@ -2,7 +2,7 @@
   <img src="../assets/button/home_page.png" alt="Home page" style="width: 150px; height: auto;">
 </a>
 
-![border](../assets/line/border_r.png)
+![border](../assets/line/border_r.png)>
 
 # BENCHMARK SGBDR
 
@@ -15,6 +15,9 @@
 - [Comparatif entre les principaux SGBDR](#comparatif-entre-les-principaux-sgbdr)
 - [Avantages de PostgreSQL](#avantages-de-postgresql)
 - [Cas d'usages optimaux](#best-practices)
+
+![border](../assets/line/border_b.png)>
+![border](../assets/line/line_pink_point_l.png)
 
 ## Introduction
 

@@ -12,9 +12,13 @@
 
 - [Premier pas](#premier-pas)
 
-![border](../assets/line/line_pink_point_r.png)
+![border](../assets/line/border_b.png)
 
-## Premier pas :
+![border](../assets/line/line_pink_point_l.png)
+
+# Premier pas :
+
+![border](../assets/line/line_teal_point_r.png)
 
 ### Avec pgcli
 
@@ -79,7 +83,7 @@ You are now connected to database "aubondeal" as user "postgres"
 <a href="../README.md">
   <img src="../assets/button/home_page.png" alt="Home page" style="width: 150px; height: auto;">
 </a>
-<a href="#règles-de-gestion">
+<a href="#sommaire">
   <img src="../assets/button/back_to_top.png" alt="Back to top" style="width: 150px; height: auto;">
 </a>
 
