@@ -29,6 +29,10 @@ Les visiteurs peuvent consulter le catalogue et créer un compte, tandis que les
 
 - Ce système permet de protéger les données sensibles tout en offrant une expérience utilisateur fluide et sécurisée
 
+<a href="#sommaire">
+  <img src="../assets/button/back_to_top.png" alt="back to top" style="width: 150px; height: auto;">
+</a>
+
 # RBAC
 
 ![border](../assets/line/line_pink_point_l.png)

@@ -53,7 +53,7 @@ CREATE TABLE Users (
 -- Table des commandes
 CREATE TABLE Orders (
     order_number SERIAL PRIMARY KEY,                       -- Clé primaire unique auto-incrémentée pour chaque commande
-    order_total_cost_ht NUMERIC(10, 2) NOT NULL,           -- Coût total hors taxes de la commande
+    order_total_cost_ht NUMERIC(10, 2) NOT NULL,           -- signifie que le nombre peut avoir jusqu'à 10 chiffres au total, dont 2 chiffres après la virgule.
     order_total_quantity INTEGER NOT NULL,                 -- Quantité totale de produits dans la commande
     created_at TIMESTAMP NOT NULL DEFAULT NOW(),           -- Date de création de la commande
     deliver_at TIMESTAMP,                                  -- Date de livraison prévue pour la commande
@@ -66,7 +66,7 @@ CREATE TABLE Products (
     product_uuid UUID PRIMARY KEY DEFAULT uuid_generate_v4(),  -- Clé primaire unique générée pour chaque produit
     product_name VARCHAR(100) NOT NULL,                        -- Nom du produit
     product_description TEXT,                                  -- Description du produit
-    product_price NUMERIC(10, 2) NOT NULL,                     -- Prix unitaire du produit
+    product_price NUMERIC(10, 2) NOT NULL,                     -- signifie que le nombre peut avoir jusqu'à 10 chiffres au total, dont 2 chiffres après la virgule.
     product_quantity INTEGER NOT NULL,                         -- Quantité de produit en stock
     created_at TIMESTAMP NOT NULL DEFAULT NOW(),               -- Date de création du produit
     updated_at TIMESTAMP                                       -- Date de dernière mise à jour du produit
