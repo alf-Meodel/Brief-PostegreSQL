@@ -38,7 +38,7 @@ Revue de code sur GitHub : Les contributions seront analysées directement dans 
 ## Livrables
 
 - [x] Repo Github
-- [ ] Un fichier SQL format PostgreSQL
+- [x] Un fichier SQL format PostgreSQL
 - [x] Des règles de gestion
 - [x] Un dictionnaire de données
 - [x] Une définition de l'acronyme MERISE dans la documentation

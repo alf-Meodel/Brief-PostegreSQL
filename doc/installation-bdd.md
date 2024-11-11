@@ -12,10 +12,6 @@
 
 - [Prérequis](#prérequis)
 - [Installation du projet](#installation-du-projet)
-- [Vérifier la création de la base de données et des tables :](#vérifier-la-création-de-la-base-de-données-et-des-tables)
-- [Prérequis](#prérequis)
-- [Prérequis](#prérequis)
-- [Prérequis](#prérequis)
 
 # Documents
 
