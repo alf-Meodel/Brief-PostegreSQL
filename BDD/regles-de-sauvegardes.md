@@ -360,17 +360,75 @@ sudo -u postgres psql
 
 - en ouvrant notre script **backup_pg.sh** pour corriger le nom de la base de données :
 
-dsdsds
-dsdsqff
+```
+nano ~/backup_pg.sh
+```
 
-dsdsds
-dsdsqff
+- ainsi nous allons e nom de la base de données init_aubondeal par aubondeal dans la variable DB_NAME :
 
-dsdsds
-dsdsqff
+```
+# Nom de la base de données (mettre le bon nom ici)
+DB_NAME=aubondeal
 
-dsdsds
-dsdsqff
+```
+
+- Ce qui nous donne
+
+```
+#!/bin/bash
+# Variables pour le script
+TIMESTAMP=$(date +%Y%m%d%H%M%S)  # Horodatage pour les noms de fichiers uniques
+BACKUP_DIR=~/backups             # Dossier de sauvegarde
+DB_NAME=aubondeal            # Nom de la base de données
+DB_USER=postgres                  # Nom d'utilisateur de PostgreSQL
+
+# Exécuter pg_dump pour sauvegarder la base de données dans le répertoire de sauvegarde
+pg_dump -U $DB_USER -d $DB_NAME -F c -f "$BACKUP_DIR/${DB_NAME}_$TIMESTAMP.sql"
+
+# Vérification de la réussite
+if [ $? -eq 0 ]; then
+    echo "Sauvegarde de la base de données réussie : ${BACKUP_DIR}/${DB_NAME}_$TIMESTAMP.sql"
+else
+    echo "Échec de la sauvegarde de la base de données."
+fi
+```
+
+- puis on sauvegarde et on ferme l’éditeur (Ctrl + O pour sauvegarder, puis Ctrl + X pour quitter).
+
+- et on retest le script
+
+```
+~/backup_pg.sh
+```
+
+- et ..... so sad ... ca ne fonctionne pas ..
+- mais ^^ c'est normal ! car rappelons nous du **nano ~/.pgpass** il est configuré avec l'ancien nom de **init_aubondeal** alors forcement
+
+- du coup fisa on part changer les informations
+
+```
+nano ~/.pgpass
+
+```
+
+- en ajoutant les nouvelles informations
+
+```
+localhost:5432:aubondeal:postgres:VotreMotDePasse
+```
+
+- et cette fois ...
+
+```
+~/backup_pg.sh
+```
+
+- et op c'est partii mon kiki ca focntionne !
+
+```
+❯ ~/backup_pg.sh
+Sauvegarde de la base de données réussie : /home/meodel/backups/aubondeal_20241111223224.sql
+```
 
 ![border](../assets/line/line_pink_point_l.png)
 
