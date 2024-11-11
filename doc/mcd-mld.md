@@ -13,13 +13,13 @@
 - [Merise Définition](#merise-définition)
 - [Modèle Conceptuel de Données](#modèle-conceptuel-de-données)
   - [Entités & Relations](#entités)
-  - [Modèle Logique de Données](#modèle-logique-de-données)
+- [Modèle Logique de Données](#modèle-logique-de-données)
   - [Tables & Relations](#tables)
-  - [Cardinalités](#cardinalités)
+- [Cardinalités](#cardinalités)
 
-# Diagrammes
+# Navigation
 
-- [Diagrammes](../doc/diagrammes.md)
+- [Afficher les diagrammes Mcd & MLD](../doc/diagrammes.md)
 
 ![border](../assets/line/border_b.png)
 
