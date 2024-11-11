@@ -20,7 +20,19 @@
   - [Vérification de la suppression ](#vérification-de-la-suppression)
 - [Pg_Dump !! ](#pg_dump)
   - [Pourquoi l'utiliser](#pourquoi-utiliser-pg_dump)
-  - [Sauvegardes automatiques avec pg_dump ](#sauvegardes-automatiques-avec-pg_dump)
+  - [Premiers pas avec PG_Dump](#premiers-pas-avec-pg_dump)
+  - [Créer un script pour sauvegarder la base de données](#créer-un-script-pour-sauvegarder-la-base-de-données)
+  - [Tester le script manuellement](#tester-le-script-manuellement)
+  - [Utiliser le fichier .pgpass pour stocker le mot de passe](#utiliser-le-fichier-pgpass-pour-stocker-le-mot-de-passe)
+  - [Mettre à jour le script pour supprimer les sauvegardes de plus de 15 jours](#mettre-à-jour-le-script-pour-supprimer-les-sauvegardes-de-plus-de-15-jours)
+  - [Automatiser avec cron pour une exécution quotidienne](#automatiser-avec-cron-pour-une-exécution-quotidienne-à-2h-du-matin-chaque-jour)
+- [Accéder à cron et pg_dump](#accéder-à-cron-et-pg_dump)
+
+# Documents
+
+- [Base de donnée](/BDD/init_aubondeal.sql)
+- [Cron sauvegardes](/BDD/sauvegardes/sauvegardes-automatiques.md)
+- [Pg_dump suppression de sauvegardes](/BDD/sauvegardes/suppression-sauvegardes-automatiques.md)
 
 ![border](../assets/line/border_b.png)
 
@@ -293,6 +305,10 @@ fi
 chmod +x ~/backup_pg.sh
 ```
 
+<a href="#sommaire">
+  <img src="../assets/button/back_to_top.png" alt="sommaire" style="width: 150px; height: auto;">
+</a>
+
 # Tester le script manuellement
 
 - Avant de l’automatiser avec cron, testons le script pour vérifier qu'il fonctionne en écrivant :
@@ -309,7 +325,9 @@ pg_dump: error: la connexion au serveur sur le socket « /var/run/postgresql/.s.
 Échec de la sauvegarde de la base de données.
 ```
 
-## Option 1 : Utiliser le fichier .pgpass pour stocker le mot de passe
+## Utiliser le fichier pgpass pour stocker le mot de passe
+
+- L'option 2 consiste à mettre le mot de passe directement dans le nano ~/backup_pg.sh mais nous n'allons pas l'utiliser car cela ne semble pas sécurisé (?)
 
 - PostgreSQL permet de stocker le mot de passe dans un fichier caché nommé .pgpass dans votre répertoire personnel. Voici comment configurer ce fichier pour que pg_dump puisse accéder à la base de données sans demander le mot de passe à chaque fois :
 
@@ -428,6 +446,71 @@ localhost:5432:aubondeal:postgres:VotreMotDePasse
 ```
 ❯ ~/backup_pg.sh
 Sauvegarde de la base de données réussie : /home/meodel/backups/aubondeal_20241111223224.sql
+```
+
+![border](../assets/line/line_pink_point_l.png)
+
+## Mettre à jour le script pour supprimer les sauvegardes de plus de 15 jours
+
+![border](../assets/line/line_teal_point_r.png)
+
+- Nous allons ajouter une commande à votre script backup_pg.sh pour qu’il supprime les sauvegardes plus anciennes que 15 jours.
+
+- Dnas un premeir temps nous allons ouvrir le script de sauvegarde pour le modifier :
+
+```
+nano ~/backup_pg.sh
+```
+
+- Ajoutez la commande suivante à la fin du script pour supprimer les fichiers de sauvegarde plus anciens que 15 jours :
+
+```
+# Supprimer les sauvegardes de plus de 15 jours
+find "$BACKUP_DIR" -type f -name "aubondeal_*.sql" -mtime +15 -exec rm {} \;
+```
+
+- find "$BACKUP_DIR" : Cherche les fichiers dans le dossier de sauvegarde.
+- type f : Limite la recherche aux fichiers.
+- name "aubondeal\_\*.sql" : Filtre les fichiers de sauvegarde de la base aubondeal (changez le motif si vous avez un nom différent).
+- mtime +15 : Sélectionne les fichiers modifiés il y a plus de 15 jours.
+- exec rm {} \; : Supprime les fichiers trouvés.
+
+#### Enregistrez et fermez le script.
+
+<a href="#sommaire">
+  <img src="../assets/button/back_to_top.png" alt="sommaire" style="width: 150px; height: auto;">
+</a>
+
+# Automatiser avec cron pour une exécution quotidienne à 2h du matin chaque jour
+
+- Ouvrez la crontab :
+
+```
+crontab -e
+```
+
+- Ajoutez une entrée cron pour exécuter le script de sauvegarde tous les jours à une heure choisie. Par exemple, pour exécuter la sauvegarde à 2h du matin chaque jour :
+
+```
+0 2 * * * ~/backup_pg.sh
+```
+
+Cela lancera le script de sauvegarde quotidiennement à 2h du matin. Les fichiers de sauvegarde plus anciens que 15 jours seront automatiquement supprimés chaque fois que le script est exécuté.
+
+##### Enregistrez et quittez.
+
+# Accéder à cron et pg_dump
+
+Pour éditer la configuration de cron (tâches planifiées pour l'utilisateur actuel) :
+
+```
+crontab -e
+```
+
+Pour éditer le fichier .pgpass (configuration de pg_dump pour l'authentification sans mot de passe) :
+
+```
+nano ~/.pgpass
 ```
 
 ![border](../assets/line/line_pink_point_l.png)
