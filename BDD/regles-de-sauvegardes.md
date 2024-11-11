@@ -8,8 +8,12 @@
 
 # Sommaire
 
-- [Définition](#définition)
 - [Sauvegardes Automatiques avec Cron](#sauvegardes-automatiques-de-base-de-données-avec-cron)
+- [Presentation](#presentation)
+- [Mise en place ](#mise-en-place)
+- [Planifier la sauvegarde avec cron ](#planifier-la-sauvegarde-avec-cron)
+- [Plusieurs cas de sauvegardes ](#plusieurs-cas-de-sauvegardes)
+- [Shema de la (couronne) cron](#shema-de-cron)
 
 ![border](../assets/line/border_b.png)
 
@@ -17,7 +21,133 @@
 
 ![border](../assets/line/line_teal_point_l.png)
 
+## Presentation
+
 Cette documentation explique comment configurer une tâche cron pour effectuer des sauvegardes automatiques de votre base de données en utilisant pg_dump. Ce guide est destiné aux utilisateurs de PostgreSQL, mais peut être adapté pour d’autres bases de données.
+
+# Mise en place
+
+## Préparer un répertoire pour les sauvegardes
+
+- Nous allons créer un répertoire dédié aux sauvegardes pour une meilleure organisation.
+
+```
+mkdir -p ~/backups
+```
+
+## Créer un script de sauvegarde
+
+- Créez un script qui effectuera la sauvegarde. **Ce script copiera le fichier init_aubondeal.sql** dans le dossier de sauvegarde **avec une date dans le nom pour les versions successives.**
+
+- Ouvrez un éditeur pour créer le script de sauvegarde, **par exemple backup_script.sh** :
+
+```
+nano ~/backup_script.sh
+```
+
+## Dans le fichier, ajoutez les lignes suivantes :
+
+```
+#!/bin/bash
+# Répertoire de sauvegarde
+BACKUP_DIR=~/backups
+# Nom du fichier SQL original
+FILE_TO_BACKUP=~/chemin/vers/init_aubondeal.sql
+# Nom de la sauvegarde avec la date
+BACKUP_NAME="init_aubondeal_$(date +%Y%m%d%H%M%S).sql"
+# Copier le fichier dans le répertoire de sauvegarde
+cp "$FILE_TO_BACKUP" "$BACKUP_DIR/$BACKUP_NAME"
+
+```
+
+- Sauvegardez le fichier, puis fermez l'éditeur.
+- En suite nous allons rendre le script exécutable :
+
+```
+chmod +x ~/backup_script.sh
+```
+
+# Planifier la sauvegarde avec cron
+
+Ouvrez le planificateur de tâches cron en éditant la crontab :
+
+```
+crontab -e
+```
+
+- ce qui (comme c'est la première fois que je l'utilise) nous emmene vers la selection suivante afin de chosir notre editeur de texte préféré ( nano)
+
+```
+crontab -e
+
+no crontab for meodel - using an empty one
+
+Select an editor.  To change later, run 'select-editor'.
+  1. /bin/nano        <---- easiest
+  2. /usr/bin/vim.tiny
+  3. /usr/bin/code
+  4. /bin/ed
+
+Choose 1-4 [1]: 1
+```
+
+- ensuite tout en bas après la myriade de commentaires nous pouvons link notre **backup_script.sh** fraichement créé afin de définir une durée de sauvegarde
+
+## Plusieurs cas de sauvegardes
+
+- ajoutez la ligne suivante pour exécuter le script tous les jours à 2h du matin :
+
+```
+0 2 \* \* \* ~/backup_script.sh
+```
+
+## Shema de cron
+
+- Les options cron sont organisées comme suit :
+
+```
+* * * * * command
+│ │ │ │ │
+│ │ │ │ └── Jour de la semaine (0-7, où 0 et 7 = dimanche)
+│ │ │ └──── Mois (1-12)
+│ │ └────── Jour du mois (1-31)
+│ └──────── Heure (0-23)
+└────────── Minute (0-59)
+```
+
+- Sauvegardez et fermez crontab.
+
+## Vérifier les sauvegardes
+
+Les sauvegardes seront enregistrées dans le dossier ~/backups avec un nom de fichier unique comprenant la date et l’heure de la sauvegarde.
+
+## Tester le script
+
+## dsqdqsdqs
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
 
 ## Commande Cron pour pg_dump
 
