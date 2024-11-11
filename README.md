@@ -12,6 +12,7 @@
 
 # Navigation
 
+- [Benchmark SGBDR](./doc/benchmark-sgbdr.md)
 - [MCD MLD](./doc/mcd-mld.md)
 - [Règles de gestion](doc/regles-gestion.md)
 - [Dictionnaire de données](./doc/BDD/dictionnaire-de-donnees.md)
