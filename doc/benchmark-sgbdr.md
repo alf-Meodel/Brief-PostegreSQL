@@ -4,7 +4,7 @@
 
 ![border](../assets/line/border_r.png)
 
-# BENCHMARK Postgres VS les autres SGBDR
+# BENCHMARK SGBDR
 
 ## ![border](../assets/line/line_pink_point_l.png)
 

@@ -51,7 +51,7 @@ Les cinq étoiles dans la syntaxe cron déterminent la fréquence d’exécution
 | 4e       | `*`     | Mois (1 - 12)              | `6` pour juin           |
 | 5e       | `*`     | Jour de la semaine (0 - 7) | `1` pour lundi          |
 
-![border](/Brief-PostegreSQL/assets/line/line_pink_point_l.png)
+![border](../assets/line/line_pink_point_l.png)
 
 <a href="../README.md">
   <img src="../assets/button/home_page.png" alt="Home page" style="width: 150px; height: auto;">
