@@ -13,7 +13,12 @@
 - [Mise en place ](#mise-en-place)
 - [Planifier la sauvegarde avec cron ](#planifier-la-sauvegarde-avec-cron)
 - [Plusieurs cas de sauvegardes ](#plusieurs-cas-de-sauvegardes)
-- [Shema de la (couronne) cron](#shema-de-cron)
+- [Explication des Étoiles dans Cron](#explication-des-étoiles-dans-cron)
+- [Vérifier les sauvegardes](#vérifier-les-sauvegardes)
+- [Tester le script](#tester-le-script)
+- [Supprimer les sauvegardes automatiques](#supprimer-les-sauvegardes-automatiques)
+- [Vérification de la suppression ](#vérification-de-la-suppression)
+- [Sauvegardes automatiques avec pg_dump ](#sauvegardes-automatiques-avec-pg_dump)
 
 ![border](../assets/line/border_b.png)
 
@@ -101,7 +106,7 @@ Choose 1-4 [1]: 1
 0 2 \* \* \* ~/backup_script.sh
 ```
 
-## Shema de cron
+## Explication des Étoiles dans Cron
 
 - Les options cron sont organisées comme suit :
 
@@ -117,39 +122,55 @@ Choose 1-4 [1]: 1
 
 - Sauvegardez et fermez crontab.
 
+Les cinq étoiles dans la syntaxe cron déterminent la fréquence d’exécution de la commande. Voici la signification de chaque position :
+
+| Position | Symbole | Description                | Exemple                 |
+| -------- | ------- | -------------------------- | ----------------------- |
+| 1ère     | `*`     | Minutes (0 - 59)           | `0` pour 0 min          |
+| 2e       | `*`     | Heures (0 - 23)            | `2` pour 2h du matin    |
+| 3e       | `*`     | Jour du mois (1 - 31)      | `15` pour le 15 du mois |
+| 4e       | `*`     | Mois (1 - 12)              | `6` pour juin           |
+| 5e       | `*`     | Jour de la semaine (0 - 7) | `1` pour lundi          |
+
 ## Vérifier les sauvegardes
 
 Les sauvegardes seront enregistrées dans le dossier ~/backups avec un nom de fichier unique comprenant la date et l’heure de la sauvegarde.
 
 ## Tester le script
 
-## dsqdqsdqs
+- Pour vérifier que tout fonctionne correctement, exécutez le script manuellement une fois :
 
----
+```
+~/backup_script.sh
+```
 
----
+### Youpi ca marche
 
----
+![cron youpi](../assets/img/backups_op.png)
 
----
+## Supprimer les sauvegardes automatiques
 
----
+- Ouvrez crontab pour modifier les tâches planifiées :
 
----
+```
+crontab -e
+```
 
----
+- Trouvez la ligne correspondant à votre tâche de sauvegarde
 
----
+- Supprimez cette ligne ou ajoutez un # au début pour la commenter (ce qui désactivera la tâche sans la supprimer).
 
----
+- Enregistrez et quittez :
 
----
+## Vérification de la suppression
 
----
+- Vous pouvez vérifier que la tâche a bien été supprimée en listant vos tâches cron :
 
----
+```
+crontab -l
+```
 
-## Commande Cron pour pg_dump
+## Sauvegardes automatiques avec pg_dump
 
 La commande suivante permet de créer des sauvegardes automatiques de votre base de données en utilisant pg_dump dans une tâche cron.
 
@@ -177,18 +198,6 @@ Si vous souhaitez sauvegarder une base de données nommée my_database avec l'ut
 * * * * * pg_dump -h localhost -p 5432 -U db_user -F c my_database > /backups/my_database_backup.sql
 
 ```
-
-## Explication des Étoiles dans Cron
-
-Les cinq étoiles dans la syntaxe cron déterminent la fréquence d’exécution de la commande. Voici la signification de chaque position :
-
-| Position | Symbole | Description                | Exemple                 |
-| -------- | ------- | -------------------------- | ----------------------- |
-| 1ère     | `*`     | Minutes (0 - 59)           | `0` pour 0 min          |
-| 2e       | `*`     | Heures (0 - 23)            | `2` pour 2h du matin    |
-| 3e       | `*`     | Jour du mois (1 - 31)      | `15` pour le 15 du mois |
-| 4e       | `*`     | Mois (1 - 12)              | `6` pour juin           |
-| 5e       | `*`     | Jour de la semaine (0 - 7) | `1` pour lundi          |
 
 ![border](../assets/line/line_pink_point_l.png)
 
