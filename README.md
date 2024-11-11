@@ -15,8 +15,7 @@
 - [Benchmark SGBDR](./doc/benchmark-sgbdr.md)
 - [MCD MLD](./doc/mcd-mld.md)
 - [Règles de gestion](doc/regles-gestion.md)
-- [Dictionnaire de données](./doc/BDD/dictionnaire-de-donnees.md)
-- [Regles de sauvegarde](./doc/BDD/regles-de-sauvegardes.md)
+- [Regles de sauvegarde](./BDD/regles-de-sauvegardes.md)
 - [Dictionnaire de données](./BDD/dictionnaire-de-donnees.md)
 - [Mise en place de la base de données](./doc/mise-en-place.md)
 

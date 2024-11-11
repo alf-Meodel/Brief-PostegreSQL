@@ -8,6 +8,12 @@
 
 ![border](../assets/line/line_pink_point_r.png)
 
+# Sommaire
+
+- [Premier pas](#premier-pas)
+
+![border](../assets/line/line_pink_point_r.png)
+
 ## Premier pas :
 
 ### Avec pgcli

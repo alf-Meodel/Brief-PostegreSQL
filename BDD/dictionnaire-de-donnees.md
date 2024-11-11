@@ -2,11 +2,11 @@
   <img src="../assets/button/home_page.png" alt="Home page" style="width: 150px; height: auto;">
   </a>
 
-![border](/Brief-PostegreSQL/assets/line/border_r.png)
+![border](../assets/line/border_r.png)
 
 # Dictionnaire de Données
 
-![border](/Brief-PostegreSQL/assets/line/line_teal_point_r.png)
+![border](../assets/line/line_teal_point_r.png)
 
 # Sommaire
 
@@ -19,7 +19,7 @@
 - [Conseils techniques](#conseils-techniques)
   - [uuid_generate_v4](#uuid_generate_v4)
 
-![border](/Brief-PostegreSQL/assets/line/line_teal_point_l.png)
+![border](../assets/line/line_teal_point_l.png)
 
 ## Définition
 
@@ -53,11 +53,11 @@ Les équipes de test et d’analyse peuvent s’appuyer sur le dictionnaire de d
   <img src="../assets/button/back_to_top.png" alt="Back to top" style="width: 150px; height: auto;">
 </a>
 
-![border](/Brief-PostegreSQL/assets/line/line_pink_point_l.png)
+![border](../assets/line/line_pink_point_l.png)
 
 # Le Dictionnaire de données
 
-![border](/Brief-PostegreSQL/assets/line/line_teal_point_r.png)
+![border](../assets/line/line_teal_point_r.png)
 
 ## Table Users
 
@@ -103,11 +103,11 @@ Les équipes de test et d’analyse peuvent s’appuyer sur le dictionnaire de d
   <img src="../assets/button/back_to_top.png" alt="Back to top" style="width: 150px; height: auto;">
 </a>
 
-![border](/Brief-PostegreSQL/assets/line/line_pink_point_l.png)
+![border](../assets/line/line_pink_point_l.png)
 
 # Conseils Techniques
 
-![border](/Brief-PostegreSQL/assets/line/line_pink_point_l.png)
+![border](../assets/line/line_pink_point_l.png)
 
 ### uuid_generate_v4
 
@@ -156,7 +156,7 @@ CREATE TABLE
 
 ```
 
-![border](/Brief-PostegreSQL/assets/line/line_pink_point_l.png)
+![border](../assets/line/line_pink_point_l.png)
 
 <a href="../README.md">
   <img src="../assets/button/home_page.png" alt="Home page" style="width: 150px; height: auto;">
