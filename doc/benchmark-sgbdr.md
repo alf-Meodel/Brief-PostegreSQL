@@ -2,7 +2,7 @@
   <img src="../assets/button/home_page.png" alt="Home page" style="width: 150px; height: auto;">
 </a>
 
-![border](../assets/line/border_r.png)>
+![border](../assets/line/border_r.png)
 
 # BENCHMARK SGBDR
 
@@ -16,10 +16,11 @@
 - [Avantages de PostgreSQL](#avantages-de-postgresql)
 - [Cas d'usages optimaux](#best-practices)
 
-![border](../assets/line/border_b.png)>
-![border](../assets/line/line_pink_point_l.png)
+![border](../assets/line/border_b.png)
 
-## Introduction
+# Introduction
+
+![border](../assets/line/line_pink_point_l.png)
 
 Pour le projet "AuBonDeal", le choix du SGBDR doit être guidé par des critères tels que la sécurité, la performance, la gestion des transactions et la flexibilité des données. Le tableau ci-dessus compare PostgreSQL et MySQL selon ces critères clés, en tenant compte des exigences d'une plateforme de commerce en ligne.
 

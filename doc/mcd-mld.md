@@ -11,22 +11,21 @@
 # Sommaire
 
 - [Merise Définition](#merise-définition)
-
 - [Modèle Conceptuel de Données](#modèle-conceptuel-de-données)
   - [Entités & Relations](#entités)
-- [Modèle Logique de Données](#modèle-logique-de-données)
+  - [Modèle Logique de Données](#modèle-logique-de-données)
   - [Tables & Relations](#tables)
-- [Cardinalités](#cardinalités)
-
-![border](../assets/line/border_b.png)
+  - [Cardinalités](#cardinalités)
 
 # Diagrammes
 
 - [Diagrammes](../doc/diagrammes.md)
 
-![border](../assets/line/line_pink_point_r.png)
+![border](../assets/line/border_b.png)
 
 # Merise Définition
+
+![border](../assets/line/line_pink_point_r.png)
 
 Merise est une méthode française d'analyse et de conception des systèmes d'information, développée à la fin des années 1970. Le nom "Merise" n'est pas un acronyme, mais certains ont proposé des interprétations telles que
 
