@@ -18,6 +18,7 @@
 - [Regles de sauvegarde](./BDD/regles-de-sauvegardes.md)
 - [Dictionnaire de données](./BDD/dictionnaire-de-donnees.md)
 - [Mise en place de la base de données](./doc/mise-en-place.md)
+- [RBAC](./securite/Rbac.md)
 
 ![border](assets/line/border_b.png)
 
@@ -46,7 +47,7 @@ Revue de code sur GitHub : Les contributions seront analysées directement dans 
 
 #### Bonus :
 
-- [ ] Un RBAC
+- [x] Un RBAC
 
 ## Critères de performance
 
