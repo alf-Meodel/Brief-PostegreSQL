@@ -17,7 +17,7 @@
 - [Règles de gestion](doc/regles-gestion.md)
 - [Regles de sauvegarde](./BDD/regles-de-sauvegardes.md)
 - [Dictionnaire de données](./BDD/dictionnaire-de-donnees.md)
-- [Mise en place de la base de données](./doc/mise-en-place.md)
+- [Installation de la base de données](./doc/installation-bdd.md)
 - [RBAC](./securite/rbac.md)
 
 ![border](assets/line/border_b.png)
