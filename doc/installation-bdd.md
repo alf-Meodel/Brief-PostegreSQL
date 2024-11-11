@@ -12,10 +12,14 @@
 
 - [Prérequis](#prérequis)
 - [Installation du projet](#installation-du-projet)
+- [Vérifier la création de la base de données et des tables :](#vérifier-la-création-de-la-base-de-données-et-des-tables)
+- [Prérequis](#prérequis)
+- [Prérequis](#prérequis)
+- [Prérequis](#prérequis)
 
 # Documents
 
-- [Base de donnée .sql](#premier-pas)
+- [Base de donnée .sql](../BDD/init_aubondeal.sql)
 
 ![border](../assets/line/border_b.png)
 
@@ -45,7 +49,7 @@ Avoir un accès avec un utilisateur ayant le droit de créer des bases de donné
 
 ## Créer le fichier SQL :
 
-[script.sql]()
+[script.sql](../BDD/init_aubondeal.sql)
 
 Copiez le script SQL fourni ci-dessus dans un éditeur de texte.
 Enregistrez-le sous un nom comme init_aubondeal.sql.
