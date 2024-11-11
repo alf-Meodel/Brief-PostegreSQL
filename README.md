@@ -21,6 +21,7 @@
 - [Securiser la base de données](./securite/securisation-bdd.md)
 - [Politique de rétention des sauvegardes](./BDD/regles-de-sauvegardes.md)
 - [RBAC](./securite/rbac.md)
+- [Propositions d'améliorations](./doc/proposition-amelioration.md)
 
 ![border](assets/line/border_b.png)
 
@@ -44,7 +45,7 @@ Revue de code sur GitHub : Les contributions seront analysées directement dans 
 - [x] Des règles de gestion
 - [x] Un dictionnaire de données
 - [x] Une définition de l'acronyme MERISE dans la documentation
-- [ ] Un document présentant les améliorations à apporter pour cette BDD / Diagrammes fournis
+- [x] Un document présentant les améliorations à apporter pour cette BDD / Diagrammes fournis
 - [x] Un document expliquant le choix du SGBDR
 
 #### Bonus :
