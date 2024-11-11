@@ -32,7 +32,11 @@
 
 Cette documentation explique comment configurer une tâche cron pour effectuer des sauvegardes automatiques de votre base de données en utilisant pg_dump. Ce guide est destiné aux utilisateurs de PostgreSQL, mais peut être adapté pour d’autres bases de données.
 
+![border](../assets/line/line_pink_point_l.png)
+
 # Mise en place
+
+![border](../assets/line/line_pink_point_r.png)
 
 ## Préparer un répertoire pour les sauvegardes
 
@@ -78,7 +82,11 @@ chmod +x ~/backup_script.sh
   <img src="../assets/button/back_to_top.png" alt="sommaire" style="width: 150px; height: auto;">
 </a>
 
+![border](../assets/line/line_pink_point_l.png)
+
 # Planifier la sauvegarde avec cron
+
+![border](../assets/line/line_pink_point_r.png)
 
 Ouvrez le planificateur de tâches cron en éditant la crontab :
 
@@ -184,15 +192,12 @@ crontab -l
   <img src="../assets/button/back_to_top.png" alt="sommaire" style="width: 150px; height: auto;">
 </a>
 
+![border](../assets/line/line_pink_point_l.png)
+
 # PG_dump
+![border](../assets/line/line_pink_point_r.png)
 
 ## Pourquoi utiliser pg_dump
-
-- Avec cron et un simple script de copie : Vous sauvegardez un fichier statique (comme un fichier SQL existant ou tout autre fichier sur votre système). Ce type de sauvegarde est idéal pour les fichiers de configuration, les scripts ou d'autres fichiers qui ne changent pas de manière dynamique.
-
-- Avec pg_dump et cron : pg_dump est conçu spécifiquement pour les bases de données PostgreSQL. Plutôt que de simplement copier un fichier, pg_dump génère une exportation complète de votre base de données au moment de l’exécution. Cela signifie qu'il prend en compte toutes les modifications faites dans la base de données, même si elles se produisent juste avant la sauvegarde.
-
-#### Pourquoi utiliser pg_dump avec cron pour les bases de données
 
 - Bases de données dynamiques : Contrairement aux fichiers, une base de données est constamment mise à jour (insertion de données, suppression, modifications). pg_dump s'assure de capturer une image complète et cohérente de la base de données à un moment donné.
 
@@ -218,34 +223,154 @@ Idéal pour les bases de données, car pg_dump crée une exportation complète d
   <img src="../assets/button/back_to_top.png" alt="sommaire" style="width: 150px; height: auto;">
 </a>
 
-## Sauvegardes automatiques avec pg_dump
+![border](../assets/line/line_pink_point_l.png)
 
-La commande suivante permet de créer des sauvegardes automatiques de votre base de données en utilisant pg_dump dans une tâche cron.
+# Premiers pas avec PG_Dump
 
-```
-* * * * * pg_dump -h localhost -p 5432 -U (ton_nom_d'utilisateur) -F c (nom_de_ta_bdd) > (ton_chemin_d'accès)
-```
+![border](../assets/line/line_pink_point_r.png)
 
-## Explication de la Commande
+## Installer pg_dump
 
-- `* * * * *` : Définit l’intervalle de temps pour exécuter la commande.
-- pg_dump : Utilitaire PostgreSQL pour réaliser une sauvegarde de la base de données.
-  - `-h localhost` : Définit l’hôte de la base de données (localhost pour la machine locale).
-  - `-p 5432` : Spécifie le port PostgreSQL (par défaut : 5432).
-  - `-U (ton_nom_d'utilisateur)` : Nom d’utilisateur pour se connecter à la base de données.
-  - `-F c `: Format de sortie c (format de sauvegarde personnalisé de PostgreSQL).
-  - `(nom_de_ta_bdd)` : Nom de la base de données à sauvegarder.
-  - `>` : Redirection de la sortie vers un fichier.
-  - `(ton_chemin_d'accès)` : Chemin où enregistrer le fichier de sauvegarde (par ex., /backups/backup.sql).
-
-## Exemple de Commande
-
-Si vous souhaitez sauvegarder une base de données nommée my_database avec l'utilisateur db_user et stocker le fichier dans /backups/my_database_backup.sql, la commande sera :
+- pg_dump fait partie du package PostgreSQL. Si PostgreSQL n'est pas déjà installé sur votre système, vous pouvez l'installer de cette manière :
 
 ```
-* * * * * pg_dump -h localhost -p 5432 -U db_user -F c my_database > /backups/my_database_backup.sql
+sudo apt update
+sudo apt install postgresql
+```
+
+## Vérifier l'installation de pg_dump
 
 ```
+pg_dump --version
+```
+
+- ce qui affiche notr version de pg_dump comme ceci :
+
+```
+pg_dump (PostgreSQL) 16.4 (Ubuntu 16.4-0ubuntu0.24.04.2)
+```
+
+## Créer un script pour sauvegarder la base de données
+
+- Maintenant, nous allons créer un script qui utilisera pg_dump pour sauvegarder la base de données **init_aubondeal.sql.**
+
+- pour faire original nosu allons crréer un fichier
+  de script **(backup_pg.sh)** oui comme pour cron mais avec **pg à la fin ^^** :
+
+```
+nano ~/backup_pg.sh
+```
+
+- Ajoutez le code suivant dans le script, en adaptant les informations de connexion (utilisateur, nom de base de données) :
+
+```
+#!/bin/bash
+# Variables pour le script
+TIMESTAMP=$(date +%Y%m%d%H%M%S)  # Horodatage pour les noms de fichiers uniques
+BACKUP_DIR=~/backups             # Dossier de sauvegarde
+DB_NAME=init_aubondeal            # Nom de la base de données
+DB_USER=postgres                  # Nom d'utilisateur de PostgreSQL
+
+# Exécuter pg_dump pour sauvegarder la base de données dans le répertoire de sauvegarde
+pg_dump -U $DB_USER -d $DB_NAME -F c -f "$BACKUP_DIR/${DB_NAME}_$TIMESTAMP.sql"
+
+# Vérification de la réussite
+if [ $? -eq 0 ]; then
+    echo "Sauvegarde de la base de données réussie : ${BACKUP_DIR}/${DB_NAME}_$TIMESTAMP.sql"
+else
+    echo "Échec de la sauvegarde de la base de données."
+fi
+```
+
+- **TIMESTAMP** : Ajoute l'horodatage au nom de la sauvegarde pour des versions uniques.
+- **BACKUP_DIR** : Répertoire où les sauvegardes seront stockées.
+- **DB_NAME** : Nom de la base de données à sauvegarder (ici init_aubondeal).
+- **DB_USER** : Nom d’utilisateur PostgreSQL (vous pouvez le remplacer par le vôtre).
+
+#### Enregistrez et fermez le fichier, puis rendez le script exécutable :
+
+```
+chmod +x ~/backup_pg.sh
+```
+
+# Tester le script manuellement
+
+- Avant de l’automatiser avec cron, testons le script pour vérifier qu'il fonctionne en écrivant :
+
+```
+~/backup_pg.sh
+```
+
+- Mais cela ne focntionne pas
+
+```
+Password:
+pg_dump: error: la connexion au serveur sur le socket « /var/run/postgresql/.s.PGSQL.5432 » a échoué : FATAL:  password authentication failed for user "postgres"
+Échec de la sauvegarde de la base de données.
+```
+
+## Option 1 : Utiliser le fichier .pgpass pour stocker le mot de passe
+
+- PostgreSQL permet de stocker le mot de passe dans un fichier caché nommé .pgpass dans votre répertoire personnel. Voici comment configurer ce fichier pour que pg_dump puisse accéder à la base de données sans demander le mot de passe à chaque fois :
+
+## Créez le fichier .pgpass dans votre répertoire personnel :
+
+```
+nano ~/.pgpass
+```
+
+- Ajoutez la ligne suivante, en remplaçant hostname, port, database, username, et password par les informations de connexion correctes :
+
+```
+hostname:port:database:username:password
+```
+
+- Pour une connexion locale avec PostgreSQL (par défaut, localhost et le port 5432), voici ce que vous pouvez mettre :
+
+```
+localhost:5432:init_aubondeal:postgres:VotreMotDePasse
+```
+
+- Enregistrez et fermez le fichier, puis modifiez les permissions pour que seul votre utilisateur puisse le lire :
+
+```
+chmod 600 ~/.pgpass
+```
+
+- Avec cette configuration, pg_dump utilisera automatiquement le mot de passe dans .pgpass, ce qui devrait résoudre le problème d'authentification.
+
+- mais ... cela ne focntionne pas
+
+```
+❯ ~/backup_pg.sh
+pg_dump: error: la connexion au serveur sur le socket « /var/run/postgresql/.s.PGSQL.5432 » a échoué : FATAL:  database "init_aubondeal" does not exist
+Échec de la sauvegarde de la base de données.
+```
+
+- nous allons donc vérifier si la base de donnée **init_aubondeal** existe
+
+```
+sudo -u postgres psql
+\l
+```
+
+- mais nosu découvrons que la base s'appelle aubondeal
+
+- Nous allons donc devoir mettre à jour le script de sauvegarde
+
+- en ouvrant notre script **backup_pg.sh** pour corriger le nom de la base de données :
+
+dsdsds
+dsdsqff
+
+dsdsds
+dsdsqff
+
+dsdsds
+dsdsqff
+
+dsdsds
+dsdsqff
 
 ![border](../assets/line/line_pink_point_l.png)
 
@@ -257,3 +382,7 @@ Si vous souhaitez sauvegarder une base de données nommée my_database avec l'ut
 </a>
 
 ![border](../assets/line/border_r.png)
+
+```
+
+```
