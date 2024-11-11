@@ -6,7 +6,7 @@
 
 # Règles de Gestion
 
-![border](../assets/line/line_pink_point_r.png)
+![border](../assets/line/line_pink_point_l.png)
 
 #### Gestion des utilisateurs :
 

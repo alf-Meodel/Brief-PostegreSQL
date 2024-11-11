@@ -1,12 +1,12 @@
-<a href="/README.md">
-  <img src="/assets/button/home_page.png" alt="Home page" style="width: 150px; height: auto;">
+<a href="../README.md">
+  <img src="../assets/button/home_page.png" alt="Home page" style="width: 150px; height: auto;">
   </a>
 
-![border](/assets/line/green_point_line_l.png)
+![border](../assets/line/border_r.png)
 
 # Documentation : Sauvegardes Automatiques de Base de Données avec Cron
 
-![border](/assets/line/green_point_line_l.png)
+![border](../assets/line/border_b.png)
 
 Cette documentation explique comment configurer une tâche cron pour effectuer des sauvegardes automatiques de votre base de données en utilisant pg_dump. Ce guide est destiné aux utilisateurs de PostgreSQL, mais peut être adapté pour d’autres bases de données.
 
@@ -50,3 +50,14 @@ Les cinq étoiles dans la syntaxe cron déterminent la fréquence d’exécution
 | 3e       | `*`     | Jour du mois (1 - 31)      | `15` pour le 15 du mois |
 | 4e       | `*`     | Mois (1 - 12)              | `6` pour juin           |
 | 5e       | `*`     | Jour de la semaine (0 - 7) | `1` pour lundi          |
+
+![border](/Brief-PostegreSQL/assets/line/line_pink_point_l.png)
+
+<a href="../README.md">
+  <img src="../assets/button/home_page.png" alt="Home page" style="width: 150px; height: auto;">
+</a>
+<a href="#dictionnaire-de-données">
+  <img src="../assets/button/back_to_top.png" alt="summary" style="width: 150px; height: auto;">
+</a>
+
+![border](../assets/line/border_r.png)

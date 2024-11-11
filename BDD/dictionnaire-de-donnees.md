@@ -1,12 +1,13 @@
-<a href="/README.md">
-  <img src="/Brief-PostegreSQL/assets/button/home_page.png" alt="Home page" style="width: 150px; height: auto;">
+<a href="../README.md">
+  <img src="../assets/button/home_page.png" alt="Home page" style="width: 150px; height: auto;">
   </a>
 
-![border](/Brief-PostegreSQL/assets/line/line_pink_point_l.png)
+![border](/Brief-PostegreSQL/assets/line/border_r.png)
 
 # Dictionnaire de Données
 
-![border](/Brief-PostegreSQL/assets/line/line_pink_point_r.png)
+![border](/Brief-PostegreSQL/assets/line/line_teal_point_r.png)
+
 # Sommaire
 
 - [Définition](#définition)
@@ -15,9 +16,8 @@
   - [Table Products](#table-users)
   - [Table Orders](#table-users)
   - [Table belong (Table d’association entre Orders et Products)](#table-users)
-- [Conseils techniques](#tips-techniques)
+- [Conseils techniques](#conseils-techniques)
   - [uuid_generate_v4](#uuid_generate_v4)
-
 
 ![border](/Brief-PostegreSQL/assets/line/line_teal_point_l.png)
 
@@ -48,6 +48,10 @@ Il spécifie également les contraintes sur les données (ex., pas de valeurs nu
 ## Support aux Testeurs et Analystes
 
 Les équipes de test et d’analyse peuvent s’appuyer sur le dictionnaire de données pour comprendre les structures qu’elles doivent vérifier ou analyser, ce qui aide à établir des plans de test efficaces et à interpréter les résultats.
+
+<a href="#sommaire">
+  <img src="../assets/button/back_to_top.png" alt="Back to top" style="width: 150px; height: auto;">
+</a>
 
 ![border](/Brief-PostegreSQL/assets/line/line_pink_point_l.png)
 
@@ -95,9 +99,15 @@ Les équipes de test et d’analyse peuvent s’appuyer sur le dictionnaire de d
 | order_number      | UUID           | Identifiant de la commande (clé étrangère vers `Orders.order_number`) |
 | product_UUID      | UUID           | Identifiant du produit (clé étrangère vers `Products.product_UUID`)   |
 
+<a href="#sommaire">
+  <img src="../assets/button/back_to_top.png" alt="Back to top" style="width: 150px; height: auto;">
+</a>
+
 ![border](/Brief-PostegreSQL/assets/line/line_pink_point_l.png)
 
-## Conseils Techniques
+# Conseils Techniques
+
+![border](/Brief-PostegreSQL/assets/line/line_pink_point_l.png)
 
 ### uuid_generate_v4
 
@@ -145,13 +155,14 @@ aubondeal> CREATE TABLE users (
 CREATE TABLE
 
 ```
+
 ![border](/Brief-PostegreSQL/assets/line/line_pink_point_l.png)
 
 <a href="../README.md">
-  <img src="/Brief-PostegreSQL//assets/button/home_page.png" alt="Home page" style="width: 150px; height: auto;">
+  <img src="../assets/button/home_page.png" alt="Home page" style="width: 150px; height: auto;">
 </a>
 <a href="#dictionnaire-de-données">
-  <img src="/Brief-PostegreSQL//assets/button/back_to_top.png" alt="summary" style="width: 150px; height: auto;">
+  <img src="../assets/button/back_to_top.png" alt="summary" style="width: 150px; height: auto;">
 </a>
 
-![border](/Brief-PostegreSQL/assets/line/border_b.png)
+![border](../assets/line/border_r.png)

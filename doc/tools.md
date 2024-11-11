@@ -2,9 +2,9 @@
   <img src="../assets/button/home_page.png" alt="Home page" style="width: 150px; height: auto;">
 </a>
 
-# Tools
+![border](../assets/line/border_r.png)
 
-![border](../assets/line/border_l.png)
+# Tools
 
 ## Sommaire
 
