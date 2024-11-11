@@ -173,7 +173,7 @@ Si la valeur de la clé primaire référencée change dans la table Products ou 
 
 ![border](../assets/line/line_pink_point_l.png)
 
-# Sécurisation avancée :
+# Sécurisation avancée
 
 ![border](../assets/line/line_teal_point_r.png)
 

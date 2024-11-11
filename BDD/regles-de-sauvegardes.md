@@ -4,9 +4,18 @@
 
 ![border](../assets/line/border_r.png)
 
-# Documentation : Sauvegardes Automatiques de Base de Données avec Cron
+# Documentation : Règles de sauvegarde
+
+# Sommaire
+
+- [Définition](#définition)
+- [Sauvegardes Automatiques avec Cron](#sauvegardes-automatiques-de-base-de-données-avec-cron)
 
 ![border](../assets/line/border_b.png)
+
+## Sauvegardes Automatiques de Base de Données avec Cron
+
+![border](../assets/line/line_teal_point_l.png)
 
 Cette documentation explique comment configurer une tâche cron pour effectuer des sauvegardes automatiques de votre base de données en utilisant pg_dump. Ce guide est destiné aux utilisateurs de PostgreSQL, mais peut être adapté pour d’autres bases de données.
 
@@ -56,8 +65,8 @@ Les cinq étoiles dans la syntaxe cron déterminent la fréquence d’exécution
 <a href="../README.md">
   <img src="../assets/button/home_page.png" alt="Home page" style="width: 150px; height: auto;">
 </a>
-<a href="#dictionnaire-de-données">
-  <img src="../assets/button/back_to_top.png" alt="summary" style="width: 150px; height: auto;">
+<a href="#sommaire">
+  <img src="../assets/button/back_to_top.png" alt="sommaire" style="width: 150px; height: auto;">
 </a>
 
 ![border](../assets/line/border_r.png)
