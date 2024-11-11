@@ -15,9 +15,10 @@
 - [Benchmark SGBDR](./doc/benchmark-sgbdr.md)
 - [MCD MLD](./doc/mcd-mld.md)
 - [Règles de gestion](doc/regles-gestion.md)
-- [Politique de rétention des sauvegardes](./BDD/regles-de-sauvegardes.md)
+
 - [Dictionnaire de données](./BDD/dictionnaire-de-donnees.md)
 - [Installation de la base de données](./doc/installation-bdd.md)
+- [Politique de rétention des sauvegardes](./BDD/regles-de-sauvegardes.md)
 - [RBAC](./securite/rbac.md)
 
 ![border](assets/line/border_b.png)
