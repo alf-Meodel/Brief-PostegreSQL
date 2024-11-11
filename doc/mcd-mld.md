@@ -17,9 +17,9 @@
   - [Tables & Relations](#tables)
 - [Cardinalités](#cardinalités)
 
-# Navigation
+# Documents
 
-- [Afficher les diagrammes Mcd & MLD](../doc/diagrammes.md)
+- [Diagrammes Mcd & MLD](../doc/diagrammes.md)
 
 ![border](../assets/line/border_b.png)
 
@@ -35,7 +35,7 @@ Merise est une méthode française d'analyse et de conception des systèmes d'in
 
 - « qui ne peut porter de beaux fruits que si on lui greffe une branche de cerisier : ainsi en va-t-il des méthodes informatiques bien conçues, qui ne produisent de bons résultats que si la greffe sur l'organisation réussit »
 
-<a href="#diagrammes">
+<a href="#sommaire">
   <img src="../assets/button/back_to_top.png" alt="Back to top" style="width: 150px; height: auto;">
 </a>
 
@@ -47,7 +47,7 @@ Merise est une méthode française d'analyse et de conception des systèmes d'in
 
 - Le MCD est le premier niveau de conception d'une base de données. Il vise à représenter les données de manière conceptuelle, sans se préoccuper de la structure informatique finale. Ce modèle permet de visualiser les entités principales et les relations entre elles.
 
-<a href="#diagrammes">
+<a href="#sommaire">
   <img src="../assets/button/back_to_top.png" alt="Back to top" style="width: 150px; height: auto;">
 </a>
 
@@ -105,7 +105,7 @@ La relation entre Users et Orders est de type 1,n, signifiant qu'un utilisateur 
 
 La relation entre Orders et Products est de type n,n, ce qui signifie qu'une commande peut contenir plusieurs produits et qu'un produit peut être présent dans plusieurs commandes.
 
-<a href="#diagrammes">
+<a href="#sommaire">
   <img src="../assets/button/back_to_top.png" alt="Back to top" style="width: 150px; height: auto;">
 </a>
 
@@ -158,7 +158,7 @@ La table contient order_number comme clé primaire et les colonnes
 - deliver_at,
 - une clé étrangère user_UUID **qui fait référence à la table Users.**
 
-<a href="#diagrammes">
+<a href="#sommaire">
   <img src="../assets/button/back_to_top.png" alt="Back to top" style="width: 150px; height: auto;">
 </a>
 
@@ -171,7 +171,7 @@ La table contient order_number comme clé primaire et les colonnes
 is ordered by : La relation est représentée par une clé étrangère user_UUID dans la table Orders, pour indiquer que chaque commande est passée par un utilisateur.
 belong : La relation entre Orders et Products est gérée par une table d'association belong, avec deux clés étrangères product_UUID et order_number, qui relient les produits aux commandes dans une relation de type n,n.
 
-<a href="#diagrammes">
+<a href="#sommaire">
   <img src="../assets/button/back_to_top.png" alt="Back to top" style="width: 150px; height: auto;">
 </a>
 
@@ -205,7 +205,7 @@ belong : La relation entre Orders et Products est gérée par une table d'associ
 
 <a href="../README.md">
   <img src="../assets/button/home_page.png" alt="Home page" style="width: 150px; height: auto;">
-</a><a href="#diagrammes">
+</a><a href="#sommaire">
   <img src="../assets/button/back_to_top.png" alt="Back to top" style="width: 150px; height: auto;">
 </a>
 

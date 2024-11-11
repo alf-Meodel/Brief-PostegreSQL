@@ -12,6 +12,10 @@
 
 - [Premier pas](#premier-pas)
 
+# Documents
+
+- [Base de donnée .sql](#premier-pas)
+
 ![border](../assets/line/border_b.png)
 
 ![border](../assets/line/line_pink_point_l.png)
@@ -20,63 +24,81 @@
 
 ![border](../assets/line/line_teal_point_r.png)
 
-### Avec pgcli
+Tutoriel : Comment importer et exécuter le script SQL pour créer la base de données aubondeal
+Prérequis
+PostgreSQL installé : Assurez-vous que PostgreSQL est installé et accessible.
+Permissions : Avoir un accès avec un utilisateur ayant le droit de créer des bases de données (comme le superutilisateur postgres).
+Étapes
+Créer le fichier SQL :
 
-- Ouvrez votre terminal (Invite de commandes ou PowerShell) et connectez-vous en tant que super utilisateur PostgreSQL, généralement postgres :
+Copiez le script SQL fourni ci-dessus dans un éditeur de texte.
+Enregistrez-le sous un nom comme init_aubondeal.sql.
+Ouvrir le terminal ou l’invite de commandes :
 
-```
-pgcli -U postgres
-```
+Sur Windows, utilisez PowerShell ou Invite de commandes.
+Sur Linux ou macOS, ouvrez un terminal.
+Se connecter à PostgreSQL avec le superutilisateur :
 
-### Avec psql
-
-- Ouvrez l’Invite de commandes (ou PowerShell) et connectez-vous avec psql :
-
-```
+Dans le terminal, connectez-vous à PostgreSQL en utilisant le superutilisateur postgres pour exécuter le script avec les permissions nécessaires. Utilisez psql pour cela.
+bash
+Copier le code
 psql -U postgres
-```
+Entrez le mot de passe de postgres si nécessaire.
+Importer le fichier SQL :
 
-### Créer la base de données "aubondeal"
+Exécutez la commande suivante pour importer et exécuter le fichier init_aubondeal.sql :
+sql
+Copier le code
+\i /chemin/vers/le/fichier/init_aubondeal.sql
+Remplacez /chemin/vers/le/fichier/init_aubondeal.sql par le chemin réel vers votre fichier SQL.
+Exemple pour Windows :
 
-```
-CREATE DATABASE aubondeal;
-```
+sql
+Copier le code
+\i C:\Users\votre_nom\Documents\init_aubondeal.sql
+Vérifier la création de la base de données et des tables :
 
-_Si la commande réussit, vous verrez un message de confirmation indiquant CREATE DATABASE_
-
-### Vérifier la création de la base de données
-
-- Pour vérifier que la base de données aubondeal a été créée, vous pouvez lister les bases de données avec la commande suivante :
-
-```
+Après l'exécution du fichier, vous pouvez vérifier que la base de données, les tables et les utilisateurs ont été créés correctement.
+Pour lister les bases de données :
+sql
+Copier le code
 \l
-```
-
-- Cela affichera toutes les bases de données existantes, avec aubondeal.
-
-```
-+------------+----------+----------+--------------------+--------------------+-----------------------+
-| Name       | Owner    | Encoding | Collate            | Ctype              | Access privileges     |
-|------------+----------+----------+--------------------+--------------------+-----------------------|
-| aubondeal  | postgres | UTF8     | French_France.1252 | French_France.1252 | <null>                |
-| helloworld | postgres | UTF8     | French_France.1252 | French_France.1252 | <null>                |
-
-```
-
-### Se connecter à la base de données aubondeal
-
-- Pour commencer à utiliser la base de données nouvellement créée, connectez-vous à celle-ci en utilisant la commande suivante :
-
-```
+Pour voir les tables dans la base de données aubondeal :
+sql
+Copier le code
 \c aubondeal
-```
+\dt
+Tester la connexion avec l’utilisateur aubondeal_api :
 
-- Si la connexion est réussie, vous verrez un message de confirmation indiquant ceci
+Déconnectez-vous de psql en tapant \q.
+Testez la connexion avec l'utilisateur aubondeal_api :
+bash
+Copier le code
+psql -U aubondeal_api -d aubondeal -h localhost
+Entrez le mot de passe de aubondeal_api tel que défini dans le script.
+Résumé des Commandes pour Importer le Script SQL
+Ouvrir psql avec le superutilisateur :
 
-```
-postgres@(none):postgres> \c aubondeal
-You are now connected to database "aubondeal" as user "postgres"
-```
+bash
+Copier le code
+psql -U postgres
+Importer le script SQL :
+
+sql
+Copier le code
+\i /chemin/vers/le/fichier/init_aubondeal.sql
+Vérifier la création de la base de données et des tables :
+
+sql
+Copier le code
+\l -- Lister les bases de données
+\c aubondeal -- Se connecter à la base de données aubondeal
+\dt -- Lister les tables
+Tester la connexion avec aubondeal_api :
+
+bash
+Copier le code
+psql -U aubondeal_api -d aubondeal -h localhost
 
 ![border](../assets/line/line_teal_point_l.png)
 
