@@ -9,16 +9,18 @@
 # Sommaire
 
 - [Sauvegardes Automatiques avec Cron](#sauvegardes-automatiques-de-base-de-données-avec-cron)
-- [Presentation](#presentation)
-- [Mise en place ](#mise-en-place)
-- [Planifier la sauvegarde avec cron ](#planifier-la-sauvegarde-avec-cron)
-- [Plusieurs cas de sauvegardes ](#plusieurs-cas-de-sauvegardes)
-- [Explication des Étoiles dans Cron](#explication-des-étoiles-dans-cron)
-- [Vérifier les sauvegardes](#vérifier-les-sauvegardes)
-- [Tester le script](#tester-le-script)
-- [Supprimer les sauvegardes automatiques](#supprimer-les-sauvegardes-automatiques)
-- [Vérification de la suppression ](#vérification-de-la-suppression)
-- [Sauvegardes automatiques avec pg_dump ](#sauvegardes-automatiques-avec-pg_dump)
+  - [Presentation](#presentation)
+  - [Mise en place ](#mise-en-place)
+  - [Planifier la sauvegarde avec cron ](#planifier-la-sauvegarde-avec-cron)
+  - [Plusieurs cas de sauvegardes ](#plusieurs-cas-de-sauvegardes)
+  - [Explication des Étoiles dans Cron](#explication-des-étoiles-dans-cron)
+  - [Vérifier les sauvegardes](#vérifier-les-sauvegardes)
+  - [Tester le script](#tester-le-script)
+  - [Supprimer les sauvegardes automatiques](#supprimer-les-sauvegardes-automatiques)
+  - [Vérification de la suppression ](#vérification-de-la-suppression)
+- [Pg_Dump !! ](#pg_dump)
+  - [Pourquoi l'utiliser](#pourquoi-utiliser-pg_dump)
+  - [Sauvegardes automatiques avec pg_dump ](#sauvegardes-automatiques-avec-pg_dump)
 
 ![border](../assets/line/border_b.png)
 
@@ -71,6 +73,10 @@ cp "$FILE_TO_BACKUP" "$BACKUP_DIR/$BACKUP_NAME"
 ```
 chmod +x ~/backup_script.sh
 ```
+
+<a href="#sommaire">
+  <img src="../assets/button/back_to_top.png" alt="sommaire" style="width: 150px; height: auto;">
+</a>
 
 # Planifier la sauvegarde avec cron
 
@@ -132,6 +138,10 @@ Les cinq étoiles dans la syntaxe cron déterminent la fréquence d’exécution
 | 4e       | `*`     | Mois (1 - 12)              | `6` pour juin           |
 | 5e       | `*`     | Jour de la semaine (0 - 7) | `1` pour lundi          |
 
+<a href="#sommaire">
+  <img src="../assets/button/back_to_top.png" alt="sommaire" style="width: 150px; height: auto;">
+</a>
+
 ## Vérifier les sauvegardes
 
 Les sauvegardes seront enregistrées dans le dossier ~/backups avec un nom de fichier unique comprenant la date et l’heure de la sauvegarde.
@@ -169,6 +179,44 @@ crontab -e
 ```
 crontab -l
 ```
+
+<a href="#sommaire">
+  <img src="../assets/button/back_to_top.png" alt="sommaire" style="width: 150px; height: auto;">
+</a>
+
+# PG_dump
+
+## Pourquoi utiliser pg_dump
+
+- Avec cron et un simple script de copie : Vous sauvegardez un fichier statique (comme un fichier SQL existant ou tout autre fichier sur votre système). Ce type de sauvegarde est idéal pour les fichiers de configuration, les scripts ou d'autres fichiers qui ne changent pas de manière dynamique.
+
+- Avec pg_dump et cron : pg_dump est conçu spécifiquement pour les bases de données PostgreSQL. Plutôt que de simplement copier un fichier, pg_dump génère une exportation complète de votre base de données au moment de l’exécution. Cela signifie qu'il prend en compte toutes les modifications faites dans la base de données, même si elles se produisent juste avant la sauvegarde.
+
+#### Pourquoi utiliser pg_dump avec cron pour les bases de données
+
+- Bases de données dynamiques : Contrairement aux fichiers, une base de données est constamment mise à jour (insertion de données, suppression, modifications). pg_dump s'assure de capturer une image complète et cohérente de la base de données à un moment donné.
+
+- Format de sauvegarde approprié : pg_dump crée un fichier de sauvegarde dans un format que vous pouvez restaurer avec PostgreSQL, incluant toutes les tables, les schémas et les données, ce qui est difficile à faire avec une simple copie de fichier.
+
+- Automatisation avec cron : Utiliser pg_dump dans un script automatisé avec cron permet de créer des sauvegardes régulières et mises à jour de la base de données sans intervention manuelle. Cela garantit que vous disposez toujours d'une sauvegarde récente de l'état de votre base de données.
+
+## Résumé du comparatif CRON PG_DUMP
+
+#### cron seul :
+
+Utilisé pour programmer l’exécution de tâches à intervalles réguliers.
+
+#### pg_dump + cron :
+
+Idéal pour les bases de données, car pg_dump crée une exportation complète de la base de données au moment de l’exécution, que vous pouvez programmer avec cron.
+
+---
+
+---
+
+<a href="#sommaire">
+  <img src="../assets/button/back_to_top.png" alt="sommaire" style="width: 150px; height: auto;">
+</a>
 
 ## Sauvegardes automatiques avec pg_dump
 
